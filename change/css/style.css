@@ -20,11 +20,6 @@ html{height：100%；}
 .hidden{
     display: none;
  }
-.contain{
-	width:100%;
-	min-height: 18.8125rem;
-	overflow: hidden;
-}
 #menu{
 	position: fixed;
 	width: 100%;
@@ -40,10 +35,12 @@ html{height：100%；}
 	margin:0 auto;
 	position: relative; 
 }
+.navbar-brand{
+	padding-top: 0.3rem;
+}
 .navbar-brand>img{
-	display: inline-block;
-	width:5.46875rem;
-	height:1.0rem;
+    display: inline-block;
+    width: 7.46875rem;
 }
 .nav_tab{
 	display: inline-block;
@@ -51,6 +48,8 @@ html{height：100%；}
 	height:1.1875rem;
 	background: url(../img/nav-bar.png) no-repeat;
 	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
 }
 .navbar-toggle{
     position: relative;
@@ -60,6 +59,8 @@ html{height：100%；}
     background-color: transparent;
     border: 0.03125rem solid #ddd;
     border-radius: 0.225rem;
+    -webkit-border-radius: 0.225rem;
+    -moz-border-radius: 0.225rem;
 }
 .navbar-toggle>.icon-bar{
     display: block;
@@ -68,6 +69,8 @@ html{height：100%；}
     background-color: #888;
     margin: 0.225rem 0;
     border-radius: 0.03125rem;
+    -webkit-border-radius: 0.03125rem;
+    -moz-border-radius: 0.03125rem;
 }
 .off{
 	width: 1.25rem;
@@ -75,6 +78,8 @@ html{height：100%；}
     display: block;
     background: url(../img/close.png) no-repeat;
     background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
     position: absolute;
     right: 0;
     top: 1rem;
@@ -90,6 +95,8 @@ html{height：100%；}
 	border:1px solid #5C5C5C;
 	padding:1.3125rem 0 2.0rem;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 .navbar-nav li{
 	width:50%;
@@ -130,7 +137,11 @@ html{height：100%；}
 	min-height:12rem;
     word-wrap: break-word;
     border-radius: 0.0625rem;
+    -webkit-border-radius: 0.0625rem;
+    -moz-border-radius: 0.0625rem;
     box-shadow: 0 0.03125rem 0.09375rem #e6e6e6;
+    -webkit-box-shadow: 0 0.03125rem 0.09375rem #e6e6e6;
+    -moz-box-shadow: 0 0.03125rem 0.09375rem #e6e6e6;
     background: #fff;
 	margin-bottom:0.625rem;
 	position: relative;
@@ -187,6 +198,8 @@ html{height：100%；}
     background:#202020;
     padding-top:1.15625rem;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 .footer .img3{
 	display: inline-block;
@@ -223,8 +236,12 @@ html{height：100%；}
     background-color: #fff;
     position: relative;
     border-radius: 0.125rem;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
     padding:1.0rem 0.625rem;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 .mid>p{
     color: #000;
@@ -348,6 +365,8 @@ html{height：100%；}
 	border:2px dashed #FFF2F2;
 	padding:0.5rem;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 .ewm>img{
 	width:7.1875rem;
