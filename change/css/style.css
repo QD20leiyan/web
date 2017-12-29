@@ -68,8 +68,9 @@ html{height：100%；}
 	width: 0.3125rem;
     height: 1.25rem;
     background: url(../img/close.png) no-repeat;
-    right: 0;
-    top: 1rem;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
 }
 #menu .collapse{
 	width: 100%;
@@ -79,7 +80,7 @@ html{height：100%；}
 	position:absolute;
 	top:3.125rem;
 	left:0;
-	border:1px solid #5C5C5C;
+	border-bottom:1px solid #5C5C5C;
 	padding:1.3125rem 0 2.0rem;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
