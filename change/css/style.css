@@ -65,8 +65,8 @@ html{height：100%；}
     top: 0.735rem;
 }
 .navlist.active{
-	width: 0.3125rem;
-    height: 1.25rem;
+	width: 1.25rem;
+    height:1.25rem;
     background: url(../img/close.png) no-repeat;
     background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
@@ -80,7 +80,7 @@ html{height：100%；}
 	position:absolute;
 	top:3.125rem;
 	left:0;
-	border-bottom:1px solid #5C5C5C;
+	border-top:1px solid #5C5C5C;
 	padding:1.3125rem 0 2.0rem;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
