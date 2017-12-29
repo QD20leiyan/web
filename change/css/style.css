@@ -85,6 +85,12 @@ html{height：100%；}
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	/*transform:translate(0,-3px);
+	-webkit-transform:translate(0,-3px);
+	-moz-transform:translate(0,-3px);
+	transition: all .5s linear;
+	-webkit-transition: all .5s linear;
+	-moz-transition: all .5s linear;*/
 }
 .navbar-nav li{
 	width:50%;

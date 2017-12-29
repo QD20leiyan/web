@@ -4,11 +4,11 @@ $(function(){
 	$(".navlist").click(function(){
 	 	if(open){
 	 		$(this).addClass("active");
-        	$(".collapse").removeClass("hidden");
+        	$(".collapse").slideDown("slow");
         	open=false;
 	 	}else{
 	 		$(this).removeClass("active");
-	 		$(".collapse").addClass("hidden");
+	 		$(".collapse").slideUp("slow");
 	 		open=true;
 	 	}
     });
