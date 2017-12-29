@@ -65,8 +65,8 @@ html{height：100%；}
     top: 0.735rem;
 }
 .navlist.active{
-	width: 1.75rem;
-    height: 1.75rem;
+	width: 0.3125rem;
+    height: 1.25rem;
     background: url(../img/close.png) no-repeat;
     right: 0;
     top: 1rem;
