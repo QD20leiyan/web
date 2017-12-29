@@ -54,6 +54,7 @@ html{height：100%；}
 .off_active{
 	width: 2.0375rem;
     height: 1.625rem;
+    z-index:15;
     display: block;
     background: url(../img/list_03.jpg) no-repeat;
     background-size: 100% 100%;
@@ -62,7 +63,6 @@ html{height：100%；}
     position: absolute;
     right: 0;
     top: 0.735rem;
-    z-index:15;
 }
 .off{
 	width: 1.25rem;
