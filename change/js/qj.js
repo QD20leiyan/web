@@ -3,11 +3,11 @@ $(function(){
 	var open=true;
 	$(".navlist").click(function(){
 	 	if(open){
-	 		$(this).removeClass("navbar-toggle").addClass("off");
+	 		$(this).removeClass("off_active").addClass("off");
         	$(".collapse").removeClass("hidden");
         	open=false;
 	 	}else{
-	 		$(this).removeClass("off").addClass("navbar-toggle");
+	 		$(this).removeClass("off").addClass("off_active");
 	 		$(".collapse").addClass("hidden");
 	 		open=true;
 	 	}
