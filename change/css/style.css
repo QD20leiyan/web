@@ -28,6 +28,7 @@ html{height：100%；}
 	line-height:3.125rem;
 	font-family: 'Raleway', sans-serif;
 	z-index:10;
+	overflow: hidden;
 }
 #menu .navbar{
 	height:100%;
@@ -102,6 +103,11 @@ html{height：100%；}
 }
 .navbar-nav li.active .sscroll{
     color: #fff;
+}
+.contain{
+	width:100%;
+	min-height: 18.8125rem;
+	overflow: hidden;
 }
 .main{
 	width:100%;
