@@ -51,7 +51,7 @@ html{height：100%；}
 	-webkit-background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
 }
-.off_active{
+.navlist{
 	width: 2.0375rem;
     height: 1.625rem;
     z-index:15;
@@ -64,15 +64,10 @@ html{height：100%；}
     right: 0;
     top: 0.735rem;
 }
-.off{
-	width: 1.25rem;
-    height: 1.25rem;
-    display: block;
+.navlist.active{
+	width: 1.75rem;
+    height: 1.75rem;
     background: url(../img/close.png) no-repeat;
-    background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-	-moz-background-size: 100% 100%;
-    position: absolute;
     right: 0;
     top: 1rem;
 }
