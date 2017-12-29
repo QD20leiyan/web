@@ -373,3 +373,23 @@ html{height：100%；}
 	font-size:2rem;
 	font-family: 'Raleway', sans-serif;
 }
+.to-bottom {
+  font-size: 18px;
+  font-weight: bold;
+  width: 6.75rem;
+  height: 1.25rem;
+  margin: 0.625rem auto 0;
+  margin-top: 1.5625rem;
+  padding-bottom: 1rem;
+  display: block;
+  color: #ABABAB;
+}
+.loading {
+  text-align: center;
+  display: none;
+}
+.loading img {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0.625rem auto;
+}
