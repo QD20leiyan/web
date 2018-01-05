@@ -580,20 +580,20 @@ a:visited {
 }
 .ziliao-nav li.on a.zl:before{
 	content: "";
-    border-width: 0.5125rem 0.5125rem 0;
-    border-style: solid;
-    border-color: #F98D2B transparent transparent;
-    border-radius: 15%;
+    width:0.875rem;
+    height:0.5rem;
+    background:url(../img/file2_03.png) no-repeat;
+	background-size: 100% 100%;
     position: absolute;
     top: 5.61rem;
     left: 23%;
 }
 .ziliao-nav li.on a.gl:before{
 	content: "";
-    border-width: 0.5125rem 0.5125rem 0;
-    border-style: solid;
-    border-color: #6494FA transparent transparent;
-    border-radius: 15%;
+    width:0.875rem;
+    height:0.5rem;
+    background:url(../img/way-on_03.png) no-repeat;
+	background-size: 100% 100%;
     position: absolute;
     top: 5.61rem;
     right: 23%;
@@ -806,13 +806,13 @@ a:visited {
 	color:#707070;
 }
 .swiper-button-prev .swiper-button-disabled {
-    background: url(../img/prev_on.png) no-repeat;
+    background: url(../img/prev_on.png) no-repeat !important;
     background-size: 100% 100%;
     cursor: auto;
     pointer-events: none;
 }
 .swiper-button-next .swiper-button-disabled {
-    background: url(../img/next_on.png) no-repeat;
+    background: url(../img/next_on.png) no-repeat !important;
     background-size: 100% 100%;
     cursor: auto;
     pointer-events: none;
