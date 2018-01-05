@@ -161,10 +161,13 @@ a:visited {
 	width: 100%;
     height: 34.84375rem;
     overflow: hidden;
-    position: absolute;
     z-index: 3;
-    top: 2.5rem;
-    right: 2.4rem;
+}
+.yumao>img{
+    width: 100%;
+	display: block;
+	position: absolute;
+    top: 5.6rem;
 }
 .haiou{
 	width: 18.125rem;
