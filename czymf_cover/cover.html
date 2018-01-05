@@ -256,6 +256,17 @@
 		 	<p>COPY RIGHT   @2015-2017 ALL RIGHTS RESERVED</p>
 		 	<p>英雄互娱版权所有</p>	
 		</section>
+		<!-- 视频 -->
+		<div class="mask"></div>
+		<div id="video_tck">
+			<div id="player5">
+				<div id="close"></div>
+				<iframe border="0" marginwidth="0" framespacing="0" marginheight="0" src="" frameborder="0" noresize="" scrolling="no" width="100%" height="100%" vspale="0" id="iframe_btn"></iframe>
+			</div>
+		</div>
+		<div style="height: 3.85625rem;">
+
+		</div>
 	</body>
 	<script type="text/javascript" src="common/js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="common/js/jquery.fittext.js"></script>
@@ -334,20 +345,36 @@
 			    }
 				
 			})
-
+			function windowHidden(){
+       			$("html,body").css({
+            		"overflow":"hidden",
+            		"width":"100%",
+            		"height":"100%"
+        		});
+    		};
+    		function windowScroll(){
+        		$("html,body").css({
+            	"overflow":"visible",
+            	"width":"100%",
+            	"height":"auto"
+        		});
+    		}; 
 			$(".close").click(function() {
 				$(".login").hide();
 				$(".mask").hide();
+				windowScroll();
 			});
 			
 			$(".play").click(function (){
 				$("#video_tck").show();
 				$(".mask").show();
+				windowHidden();
 			})
 			
 			$("#close").click(function (){
 				$("#video_tck").hide();
 				$(".mask").hide();
+				windowScroll();
 			});
 			$(window).scroll(function(){
 				var winH = $(window).height();

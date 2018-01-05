@@ -820,6 +820,48 @@ a:visited {
 .main1,.news,.zuopin,.ziliao,.wanfa,.zhubo,.bot_con,.bot_info{
 	overflow: hidden;
 }
+/*视频*/
+.mask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	display: none;
+	background: url("../common/images/d.png") repeat
+}
+
+#video_tck {
+	display: none;
+	width: 100%;
+	height: 316px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -20% 0 0 -50%;
+	z-index: 1000
+}
+
+#player5 {
+	width: 80%;
+	color: #000;
+	position: relative;
+	margin: 0 auto;
+	z-index: 1000
+}
+
+#close {
+	width: 60px;
+	height: 60px;
+	display: block;
+	position: absolute;
+	top: -30px;
+	right: -30px;
+	background: url("../common/images/c.png") 3px no-repeat;
+	cursor: pointer;
+	background-size: 50%
+}
 
 
 @keyframes jumpp {0% {transform: translateY(10px);}to {transform: translateY(0);}}
