@@ -4,9 +4,6 @@ html {
 	-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
 	tap-highlight-color: rgba(255, 0, 0, 0)
 }
-section{
-	overflow:hidden;
-}
 input[type=button],
 input[type=password],
 input[type=text] {
@@ -162,13 +159,12 @@ a:visited {
 }
 .yumao{
 	width: 100%;
+    height: 34.84375rem;
     overflow: hidden;
     position: absolute;
     z-index: 3;
-    top: 6rem;
-}
-.yumao>img{
-	width: 100%;
+    top: 2.5rem;
+    right: 2.4rem;
 }
 .haiou{
 	width: 18.125rem;
@@ -781,19 +777,19 @@ a:visited {
 	background-color: #191919;
 }
 .bot_info ul{
-	width:14.5125rem;
+	width:15.5125rem;
 	margin:0 auto;
 	padding-top:1.375rem;
 	padding-bottom:1rem;
 }
 .bot_info ul li{
-	height: 0.78125rem;
-    line-height: 0.78125rem;
-    text-align: center;
-    float: left;
-    font-size: 0.782rem;
-    color: #fff;
-    padding: 0 0.5rem;
+	width:5.09375rem;
+	height:0.78125rem;
+	line-height: 0.78125rem;
+	text-align: center;
+	float: left;
+	font-size: 0.782rem;
+	color: #fff;
 }
 .bot_info ul li:nth-of-type(2){
 	border-left:2px solid #535353;
@@ -818,7 +814,9 @@ a:visited {
     cursor: auto;
     pointer-events: none;
 }
-
+.main1,.news,.zuopin,.ziliao,.wanfa,.zhubo,.bot_con,.bot_info{
+	overflow: hidden;
+}
 
 
 @keyframes jumpp {0% {transform: translateY(10px);}to {transform: translateY(0);}}
