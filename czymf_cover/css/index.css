@@ -4,7 +4,9 @@ html {
 	-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
 	tap-highlight-color: rgba(255, 0, 0, 0)
 }
-
+section{
+	overflow:hidden;
+}
 input[type=button],
 input[type=password],
 input[type=text] {
