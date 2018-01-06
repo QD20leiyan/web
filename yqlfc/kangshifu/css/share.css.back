@@ -1,0 +1,113 @@
+.box{
+	background:url(../img/bg_02.jpg) no-repeat;
+	background-size:100% 100%;
+	width:100%;
+	background-size:100% 100%;
+	height:35.5rem;
+	position:relative;
+	overflow: hidden;
+}
+
+.top{
+	background:url(../img/55555.jpg) no-repeat;
+	background-size:100% 100%;
+	width:100%;
+	height:2.75rem;
+	overflow: hidden;
+	position:relative;
+}
+
+.top_1{
+	margin-left:0.875rem;
+	font-size:0.71875rem;
+	line-height:2.75rem;
+}
+.top_1 .store{
+	color:#fa4321;
+}
+.top_1 span{
+	color:white;
+	margin-left:0.90625rem;
+}
+
+.top_1 .price{
+	color:white;
+	margin-left:0.9375rem;
+}
+
+.top_1 .back{
+	margin-left:0.5625rem;
+	color:white;
+}
+
+.title{
+	background:url(../img/blue_btn.png) no-repeat;
+	background-size:100% 100%;
+	width:10.40625rem;
+	height:1.8125rem;
+	position:absolute;
+	top:18.90625rem;
+	left:50%;
+	margin-left:-5.203125rem;
+}
+.title span{
+	font-size:0.8125rem;
+	text-align: center;
+	line-height:1.8125rem;
+	color:white;
+}
+.box .title01 span{
+	margin-left:3.46875rem;
+}
+.box .title02 span{
+	margin-left:3.46875rem;
+}
+.box .title03 span{
+	margin-left:3.375rem;
+}
+.box .title02{
+	top:22.375rem;
+}
+.box .title03{
+	top:25.84375rem;
+}
+.top_bg{
+	width:100%;
+	height:12.96875rem;
+}
+.middle_bg{
+	width:16.96875rem;
+	height:4.25rem;
+	position:absolute;
+	top:13.03125rem;
+	left:2.59375rem;
+}
+.logo_1{
+	display: block;
+	width:6.25rem;
+	height:3.625rem;
+	position:absolute;
+	bottom:0.6875rem;
+	left:4.5rem;
+}
+.logo_2{
+	display: block;
+	width:3.625rem;
+	height:3.34375rem;
+	position:absolute;
+	bottom:0.6875rem;
+	right:4.46875rem;
+}
+
+.dikuang{
+	display: none;
+	z-index:1;
+}
+.dikuang img{
+	display: inline-block;
+	width:100%;
+	height:35.5rem;
+	position:absolute;
+	top:0;
+	right:0;
+}

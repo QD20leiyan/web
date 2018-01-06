@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+	  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+		<link href="../common/css/common.min.css" rel="stylesheet"/>
+		<link href="./css/css.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header class="common_header">
+		    <div class="common_header_box">
+				<img class="linklogo" src="images/ico_logo.png" alt="一起来飞车" />
+				<img class="headtxt" src="images/head_txt.png" alt="一起来飞车 竞速漂移飞车手游">
+				<div class="h_btn">
+				    <a href="javascript:" class="m_giftbtn" title="礼包领取"></a>
+					<a href="javascript:" class="m_downl" target="_blank" title="游戏下载"></a>
+					<a href="http://l.taptap.com/123/Jx0ck0am" class="m_taptap" target="_blank" title="通过TapTap下载"></a>
+				</div>
+			</div>
+		</header>
+		<div class="i_wrap">
+			<section class="l_top">
+				<div class="l_topBox">
+					<a href="/" title="首页" target="_blank">首页</a>|
+					<a href="list.html" title="游戏资讯" target="_blank" class="on">游戏资讯</a>|
+					<a href="http://gamer.yingxiong.com/index/gameBbsLogin?id=12" title="游戏社区" target="_blank">游戏社区</a>
+				</div>
+			</section>
+			<section>
+				<img src="./images/bg1.jpg" alt="一起来飞车" class="i_wrap_bg1">
+				<img src="./images/bofanganniu.png" alt="视频按钮" class="i_wrap_video1" rel="xxxx">
+				<!--<img src="./images/solgan.png" alt="一起来飞车漂移" class="i_wrap_solgan1">-->
+				<div class="i_inf">
+					<a href="javascript:;" target="_blank">
+						<img src="./images/i_img.jpg" alt="图片">
+					</a>
+					<a href="javascript:;" target="_blank">
+						<img src="./images/i_img.jpg" alt="图片">
+					</a>
+				</div>
+				<div class="i_share">
+					<a  href="http://shang.qq.com/wpa/qunwpa?idkey=79619666a0a5de2dcf5af029d33db1b88001ae68b9689c604c38404f3f947839" target="_blank" class="i_share_qq"></a>
+					<a href="javascript:" class="i_share_weixin"></a>
+					<a href="http://tieba.baidu.com/f?kw=%E4%B8%80%E8%B5%B7%E6%9D%A5%E9%A3%9E%E8%BD%A6&fr=wwwt" target="_blank" class="i_share_tieba"></a>
+					<a href="http://gamer.yingxiong.com/index/gameBbsLogin?id=12" target="_blank" class="i_share_shequ"></a>
+				</div>
+			</section>
+
+			<footer class="i_fot">
+				<img src="images/hero_logo.png" alt="HERO">
+				<p>文网游备字〔2016〕Ｍ-CSG 6268 号     玩家QQ群：398099199</p>
+				<p>版权所有：北京卓越晨星科技有限公司 联系方式：010-50948585</p>
+				<p>COPYRIGHT©2015 – 2015 . ALL RIGHTS RESERVED. 京ICP备15026730号-2</p>
+				<p><a target="_blank" href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/4f6d0e4a76ec4ec1baa5b91e75404393" class="www-ico"></a><a target="_blank" href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/gameNetTag/4028c08b573b3c8901573c1ba4e908b3" class="game-ico"></a>《网络文化经营许可证》津网文〔2015〕1739-018号</p>
+			</footer>
+		</div>
+		<div class="mask"></div>
+		<div id="video_mask">
+			<div id="video_tck">
+				<div id="player5">
+					<div id="close"></div>
+					<iframe border=0 marginWidth=0 frameSpacing=0 marginHeight=0 src="" frameBorder=0 noResize scrolling="no" width=100% height=100% vspale="0" id="iframe_btn" name="iframe_btn"></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="weixin_ewm">
+			<img src="../common/images/ewm_wx.jpg" alt="">
+		</div>
+		<div class="tck_gift">
+			<div class="tck_giftcon">
+				<i class="tck_gift_close"></i>
+				<div class="tck_giftinf">
+					<div class="tck_giftl">
+						<img src="../common/images/ewm_wx.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../common/js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.fittext.js"></script>
+    	<script type="text/javascript" src="js/js.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('html').fitText(2);
+				// 视频
+				$(".i_wrap_video1").click(function(){
+		            var rel = $(this).attr('rel');
+					if(rel){
+							$("#iframe_btn").attr("src","/video/videoSource.html?"+rel);
+							$("#video_mask").show();
+							//兼容安卓延时获取iframe子元素高度来
+		                    setTimeout(function(){$("#iframe_btn").css("height",window.frames['iframe_btn'].dHeight)},100);
+					}else{
+						alert('暂无视频，敬请期待');
+						return false;
+					}
+				})
+				$("#close,#video_mask").click(function(){
+				    $("#video_mask").hide();
+					setTimeout(function(){$(window.frames['iframe_btn'].document).find("video")[0].pause()},100);
+				});
+				$("#player5").click(function(e){
+					e.stopPropagation();
+				});
+
+				// 公众号
+				$(".i_share_weixin").click(function(){
+					$(".weixin_ewm").show();
+				})
+				$(".weixin_ewm").click(function(){
+					$(".weixin_ewm").hide();
+				});
+				$(".weixin_ewm img").click(function(e){
+					e.stopPropagation()
+				})
+
+			})
+
+		</script>
+	</body>
+</html>

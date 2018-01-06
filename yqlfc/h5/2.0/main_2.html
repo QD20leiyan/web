@@ -1,0 +1,202 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8" />
+<meta name="author" content="Tencent-TGideas">
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link href="css/style.css" rel="stylesheet">
+<title>卢正雨因为说错一句话，当场被叫停</title>
+<script type="text/javascript">
+ var browser={
+	versions:function(){
+		var u = navigator.userAgent, app = navigator.appVersion;
+		return {
+			webKit: u.indexOf('AppleWebKit') > -1,
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+			android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+			weixin: u.indexOf('MicroMessenger') > -1,
+			txnews: u.indexOf('qqnews') > -1,
+			sinawb: u.indexOf('weibo') > -1,
+			mqq   : u.indexOf('QQ') > -1
+		};
+	}(),
+	language:(navigator.browserLanguage || navigator.language).toLowerCase()
+};
+</script>
+</head>
+<body>
+<div class="wrap">
+	<div class="page page1">
+			<div class="content">
+				<div class="img-box" id="v1Box">
+					<div class="poster"></div>
+					<video class="video-box" data-index="1" id="videoIndex1"  x-webkit-airplay="true" webkit-playsinline="true"  playsinline   preload="auto"  webkit-playsinline src="video/2_1.mp4" poster="" style="width: 110%;margin-left: -5%;"></video>
+				</div>
+                <div class="handbox">
+                        <div id="hand" class="hand hand-animate"></div>
+                        <p class="hand-p">你敢不敢把<br/>
+                    更多明星摇出来</p>
+                        <div id="loading" class="loading"></div>
+                            <div id="result" class="result">
+                                <a href="main_1.html">
+                                <div class="pic"><img src="images/tou.png"></div>
+                                <div class="con">您摇到了3位明星<br/>点击看看他们都说了些什么吧！</div>
+                                </a>
+                            </div>
+                </div>
+			</div>
+	</div>
+</div>
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content"> <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/ping.js"></script>
+<script src="js/public.js"></script>
+<script>
+document.querySelector('body').addEventListener('touchmove', function (ev) {
+    event.preventDefault();
+});
+var query = function(selector){
+	return document.querySelector(selector);
+};
+if (browser.versions.ios){
+var v1 = query('#videoIndex1');
+v1.play();
+};
+function wxPlay() {
+	v1.play();
+};
+if (browser.versions.ios&&browser.versions.weixin){
+	if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+		wxPlay();
+	} else {
+		if (document.addEventListener) {
+			document.addEventListener("WeixinJSBridgeReady", wxPlay, false);
+		} else if (document.attachEvent) {
+			document.attachEvent("WeixinJSBridgeReady", wxPlay);
+			document.attachEvent("onWeixinJSBridgeReady", wxPlay);
+		}
+	};
+}
+if (browser.versions.android||browser.versions.txnews){
+	var _h = $("#v1Box").width()*0.6655;
+	$("#v1Box").css('height',_h);
+	$(".poster").addClass("poster-show");
+	$("#videoIndex3").attr("controls",true);
+
+	var initV1 = function (){
+		if (v1.currentTime>0){
+			$(".poster").hide();
+			v2.removeEventListener("timeupdate", initV2, false);
+		}
+	}
+	var v1 = query('#videoIndex1');
+	v1.addEventListener("timeupdate", initV1, false);
+
+	var initV2 = function (){
+		if (v2.currentTime>0){
+			v2.pause();
+			v2.removeEventListener("timeupdate", initV2, false);
+		}
+	}
+	var v2 = query('#videoIndex2');
+	v2.addEventListener("timeupdate", initV2, false);
+
+	 $(document).one('touchstart', function (e) {
+		var v2 = query('#videoIndex2');
+		v2.play();
+	 });
+	var isPlay = false;
+
+	$(document).on("touchmove",function(){
+		if (isPlay) return;
+		var t = query('#v1Box').getBoundingClientRect().bottom;
+		if (t < 530 && !isPlay) {
+			query("#videoIndex1").play();
+			pgvSendClick({hottag:'a20150826kris.v1.play'});
+			isPlay = true;
+		}
+	});
+
+}
+
+var a = document.documentElement.clientHeight, s = document.documentElement.clientWidth;
+
+function e(e, n) {
+    var t, i = s / a, r = 320 / 504;
+    t = i > r ? a / 504 :s / 320, $(e).css({
+        "-webkit-transform-origin":n,
+        "transform-origin":n,
+        "-webkit-transform":"scale(" + t + ");",
+        transform:"scale(" + t + ");"
+    });
+}
+
+function d(e, n) {
+    var t, i = s / a, r = 320 / 504;
+    t = i < r ? a / 504 :s / 320, $(e).css({
+        "-webkit-transform-origin":n,
+        "transform-origin":n,
+        "-webkit-transform":"scale(" + t + ");",
+        transform:"scale(" + t + ");"
+    });
+}
+
+e(".page3-content",'center center');
+e(".page5-con",'center center');
+d(".videobox",'center center');
+d(".videobox",'center center');
+$(".page4").tap(function (){
+	$(".btn-off").removeClass("btn-off-hide");
+	setTimeout(function (){
+	  $(".btn-off").addClass("btn-off-hide")
+	},2000)
+
+})
+ $(".video-box").each(function(){
+	$(this)[0].addEventListener("play",function(evt) {
+		videoUtil.onPlay();
+	});
+
+	$(this)[0].addEventListener("ended",function(evt) {
+		var evtTarget = evt.target || evt.srcElement;
+		videoUtil.onEnd(evtTarget.getAttribute('data-index'))
+	});
+
+});
+function wxPlay2() {
+	 query("#videoIndex2").play();
+};
+var videoUtil = {
+    onPlay:function() {},
+    onEnd:function(a) {
+        //this.currentTime = 0;
+        switch (a) {
+          case "1":
+	           $(".handbox").show();
+                 $("#result").click(function(){
+                     location.href="main_1.html";
+                     $(".handbox").hide();
+                 })
+            break;
+
+          case "2":
+//            $(".handbox").show();
+//             $("#result").click(function(){
+//                 $(".handbox").hide();
+//             })
+            break;
+
+          case "3":
+        }
+    },
+    onError:function() {}
+};
+</script>
+</body>
+</html>

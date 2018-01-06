@@ -1,0 +1,273 @@
+.box {
+	background: url(../img/bg_04.jpg) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 35.5rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.top {
+	background: url(../img/55555.jpg) no-repeat;
+	background-size:100% 100%;
+	width: 100%;
+	height: 2.75rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.top_1 {
+	margin-left: 0.875rem;
+	font-size: 0.71875rem;
+	line-height: 2.75rem;
+}
+
+.top_1 .store {
+	color: #fa4321;
+}
+
+.top_1 span {
+	color: white;
+	margin-left: 0.90625rem;
+}
+
+.top_1 .price {
+	color: white;
+	margin-left: 5.40625rem;
+}
+
+.top_1 .back {
+	margin-left: 0.5625rem;
+	color: white;
+}
+
+.price01 {
+	position: absolute;
+	width: 5.21875rem;
+	height: 4.28125rem;
+	top: 10rem;
+	left: 3.65625rem;
+}
+
+.duihuan01 {
+	background: url(../img/dikuang.jpg) no-repeat;
+	background-size:100% 100%;
+	width: 5.21875rem;
+	height: 0.96875rem;
+	position: absolute;
+	font-size: 0.5625rem;
+	color: white;
+	text-align: center;
+	line-height: 0.96875rem;
+	top: 14.28125rem;
+	left: 3.65625rem;
+}
+
+.price02 {
+	position: absolute;
+	width: 5.21875rem;
+	height: 4.28125rem;
+	top: 10rem;
+	right: 3.65625rem;
+}
+
+.duihuan02 {
+	background: url(../img/dikuang.jpg) no-repeat;
+	background-size:100% 100%;
+	width: 5.21875rem;
+	height: 0.96875rem;
+	position: absolute;
+	font-size: 0.5625rem;
+	color: white;
+	text-align: center;
+	line-height: 0.96875rem;
+	top: 14.28125rem;
+	right: 3.65625rem;
+}
+
+.jifen {
+	position: absolute;
+	font-size: 0.625rem;
+	color: white;
+	top: 15.96875rem;
+	left: 3.65625rem;
+}
+
+.txt_code {
+	position: absolute;
+	width: 12.8rem;
+	height: 1.25rem;
+	top: 16.96875rem;
+	left: 50%;
+	margin-left: -6.40625rem;
+	border: 2px solid #006acc;
+}
+
+.txt_code input {
+	width: 9.9375rem;
+	height: 1.25rem;
+	display: block;
+	font-size: 0.6875rem;
+	background-color: #000;
+	border: 0;
+	color: white;
+	outline: none;
+}
+
+.txt_code .dh {
+	width: 2.84375rem;
+	height: 1.25rem;
+}
+
+.logo_1 {
+	display: block;
+	width: 6.25rem;
+	height: 3.625rem;
+	position: absolute;
+	bottom: 0.6875rem;
+	left: 4.5rem;
+}
+
+.logo_2 {
+	display: block;
+	width: 3.625rem;
+	height: 3.34375rem;
+	position: absolute;
+	bottom: 0.6875rem;
+	right: 4.46875rem;
+}
+
+#lottery {
+	background: url(../img/price01.jpg) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	width: 13.25rem;
+	height: 11.375rem;
+	top: 50%;
+	margin-top: -1.5rem;
+	left: 50%;
+	margin-left: -6.625rem;
+}
+
+#lottery .aaaa {
+	display: inline-block;
+	width: 3.8125rem;
+	height: 3.3rem;
+	position:relative;
+}
+#lottery .aaaa span{
+	width:3.8125rem;
+	height:0.375rem;
+	position: absolute;
+    font-size: 9px;
+    color:white;
+    left:50%;
+    margin-left:-1.90625rem;
+    text-align:center;
+    bottom:1rem;
+}
+#lottery table img {
+	display: inline-block;
+	width: 3.8125rem;
+	height: 3rem;
+}
+#lottery .txt_price{
+	position:absolute;
+	right:0;
+	top:-0.2rem;
+	color:white;
+	font-size: 0.375rem;
+}
+#lottery table .lottery-unit {
+	display: inline-block;
+}
+
+#lottery table .first_line {
+	position: absolute;
+	top: 1.0625rem;
+	left: 0.59375rem;
+}
+
+#lottery table .second_line {
+	position: absolute;
+	top: 4.375rem;
+	left: 0.59375rem;
+}
+
+#lottery table .third_line {
+	position: absolute;
+	top: 7.6875rem;
+	left: 0.59375rem;
+}
+
+#lottery table td {
+	position: relative;
+}
+
+#lottery table td.active .mask {
+	display: block;
+}
+
+.mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(13, 187, 237, 0.5);
+	display: none;
+}
+
+.include {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index:1;
+	opacity: .5;
+	width: 100%;
+	height: 100%;
+	background-color: #12385c;
+}
+.close{
+	width:1.71875rem;
+	height:1.59375rem;
+	position:absolute;
+	right:0;
+	top:0;
+}
+i{
+	font-style: normal;
+}
+
+.txt_put{
+	display: none;
+}
+.price_name {
+	background: url(../img/price.png) no-repeat;
+	background-size:100% 100%;
+	width: 14.78125rem;
+	height: 6.84375rem;
+	z-index:2;
+	color:white;
+	position: relative;
+	/*display: none;*/
+	left: 50%;
+	margin-left: -7.390625rem;
+}
+
+.price_name p {
+	width:10.5rem;
+	font-size: 0.625rem;
+	position: absolute;
+	top: 1.71875rem;
+	left: 1.5625rem;
+}
+
+.price_name .sure {
+	position: absolute;
+	width: 2.8125rem;
+	height: 1.15625rem;
+	left: 50%;
+	margin-left: -1.40625rem;
+	bottom: 0.71875rem;
+}

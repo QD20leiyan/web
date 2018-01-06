@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的十一行程</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta content="英雄互娱，hero，yingxiong，英雄游戏，英雄联赛，手机游戏，移动游戏，HPL，英雄传媒，互联网体育，手游，全民枪战，天天炫舞" name="Keywords">
+    <meta content="北京英雄互娱科技股份有限公司，成立于2015年6月16日，是全球领先的互动娱乐品牌。基于全球化的视野，立足于移动互联网时代，英雄互娱致力于为海内外用户提供优质的移动游戏。以泛娱乐为战略目标，推广“移动电竞”概念，打造全方位的移动电竞娱乐方式，开创全民互动娱乐新时代。" name="Description">
+    <link rel="SHORTCUT ICON" href="http://cdnstatic.yingxiong.com/yingxiong/2.0/favico.ico">
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?f183afb4e7ff5b06386ab52608aecea5";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<body>
+<div class="wrap">
+    <section class="section1">
+        <button class="createbtn"></button>
+    </section>
+    <section class="section2 hidden">
+        <input type="text" class="name_input"/>
+        <input type="text" class="do_input do_input01"/>
+        <input type="text" class="do_input do_input02"/>
+        <input type="text" class="do_input do_input03"/>
+        <input type="text" class="do_input do_input04"/>
+        <input type="text" class="do_input do_input05"/>
+        <input type="text" class="do_input do_input06"/>
+        <input type="text" class="do_input do_input07"/>
+        <button class="changebtn"></button>
+        <button class="surebtn"></button>
+    </section>
+    <section class="section3 hidden">
+        <img src="images/bg04.png" alt=""/>
+        <p>长按保存图片</p>
+    </section>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery+fittext+touchslider.js"></script>
+<script src="js/public.js"></script>
+</body>
+<script>
+    var mb=[['去巴黎喂鸽子',
+        '去冰岛烤冷面',
+        '去白宫贴广告',
+        '去荷兰开飞机',
+        '去朝鲜蹦野迪',
+        '去蒙古玩潜水',
+        '去泰国做手术'],
+        ['和鹿晗起床刷牙',
+            '陪吴亦凡飙车漂移',
+            '跟李易峰吃个外卖',
+            '约迪丽热巴出门逛街',
+            '请范冰冰喝下午茶',
+            '与林更新打局游戏',
+            '跟薛之谦抱头痛哭'],
+        ['护士',
+            '警官',
+            '教师',
+            'OL',
+            '厨娘',
+            '厨娘',
+            '住院输液'],
+        ['吃吃吃吃吃',
+            '睡睡睡睡睡',
+            '吃吃吃吃吃',
+            '体重秤上哭到昏厥',
+            '饿饿饿饿饿',
+            '哭着吃吃吃',
+            '吃吃吃吃吃发誓吃完这顿再也不吃吃吃吃吃'],
+        ['工作使用快乐',
+            '加班，开心的工作',
+            '思考老板还有哪些麻烦急需我去解决',
+            '为自己制定Q4工作绩效',
+            '给客户爸爸们打电话拜个早年',
+            '询问同事是否有工作需要帮忙协作',
+            '焦急的期盼工作日的到来'],
+        ['在威士忌中迷失自我',
+            '在伏特加中探寻人生',
+            '在百龄坛中收获喜悦',
+            '在芝华士中品味人生',
+            '在金汤力中笑看沧海',
+            '在朗姆酒中追忆往昔',
+            '在二锅头中返璞归真'],
+        ['下午3点要和姚明踢足球',
+            '上午10点约了丁俊晖打篮球',
+            '下午1点30陪张继科练练举重',
+            '晚上7点看吴敏霞打排球',
+            '上午11点让邹市明指导体操',
+            '全天和傅园慧一起练田径跨栏',
+            '晚上7点和李娜参加花样游泳'],
+        ['躺在床上看你们的朋友圈晒飞机票摄影大赛',
+            '躺在沙发上看你们的朋友圈名胜古迹摄影大赛',
+            '躺在零食堆里看你们的朋友圈阳光海浪摄影大赛',
+            '躺在地板上看你们的朋友圈盛世美颜摄影大赛',
+            '躺在阳台上看你们的朋友圈沙滩草原摄影大赛',
+            '躺在电脑前看你们的朋友圈人间美食摄影大赛',
+            '躺在外卖盒上看你们的朋友圈人山人海摄影大赛']];
+    var index;
+    //点击生成
+    $(".createbtn").click(function(){
+        $(".section1").addClass("hidden");
+        $(".section2").removeClass("hidden");
+        $(".changebtn").click();
+    });
+    //点击换一批
+    $(".changebtn").click(function(){
+        function getIndex(){
+            var i=Math.floor(Math.random()*8);
+            if(i==index){
+                return getIndex();
+            }else{
+                return i;
+            }
+        }
+        index=getIndex();
+        $(".do_input").each(function(i,n){
+            $(n).val(mb[index][parseInt(i)]);
+        });
+    });
+    //点击确认生成
+    $(".surebtn").click(function(){
+        var user_name=$(".name_input").val();
+        if(user_name==""){
+            alert("亲，姓名不能为空哦~")
+        }else{
+            $(".section1").addClass("hidden");
+            $(".section2").addClass("hidden");
+            $(".section3").removeClass("hidden");
+        }
+    });
+</script>
+</html>

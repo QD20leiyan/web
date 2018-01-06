@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html style="font-size:18.75px">
+<head>
+        <meta charset="UTF-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+		<meta name="format-detection" content="telephone=no,email=no,adress=no">
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery.fittext.js"></script>
+        <script src="js/echarts.js"></script>
+        <script src="js/js.js"></script>
+        <link href="css/style.css" rel="stylesheet" />
+    <!-- 引入 ECharts 文件 -->
+</head>
+<body>
+    <div class="start-bg">
+         <div class="public">
+             <div class="title"><img src="images/title-bg.png" /></div>
+             <div class="title-bg">
+                 <div class="inp"><input type="text" value="请输入你的姓名"></div>
+                <button type="button" class="start"><a href="result.html"><img src="images/start-btn.png" /></a>                   </button>
+            </div>
+        </div>
+    </div>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <script>
+        $(".inp input").focus(function(){
+            $(".inp input").val(" ");
+        })
+    </script>
+    <script>
+	$(document).ready(function(){
+		$('html').fitText(2);
+	})
+    $('body').on('touchmove', function (event) {
+            event.preventDefault();
+       });
+	</script>
+</body>
+</html>

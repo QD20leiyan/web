@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <meta name="format-detection"content="telephone=no">
+		<title>卢正雨因为说错一句话，当场被叫停</title>
+		<link href="css/reset.css" type="text/css" rel="stylesheet" />
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+		<style type="text/css">
+			#btn,#againbtn{
+				top: 30%;
+				left: 55%;
+			}
+		</style>
+	</head>
+	<body>
+<div id="videobox">
+   <video 
+    id="videoALL" 
+    src="video/31.mp4" 
+    poster="images/3.jpg" 
+    preload="auto" 
+    webkit-playsinline="true" 
+    playsinline="true" 
+    x-webkit-airplay="allow" 
+    x5-video-player-type="h5" 
+    x5-video-player-fullscreen="true" 
+     x5-video-orientation="portraint"
+    style="object-fit:fill">
+   </video>  
+   <div id="btn" onclick="playcontr()"></div>
+</div>
+		<div class="weiye">
+        <div class="erweima_down">
+            <span class="erweima">
+                <img src="images/erweima.png">
+                <img src="images/line.png" />
+            </span>
+            <span class="down">
+                <a href="http://downurl.yingxiong.com/url/fc_jsgs.html"><img src="images/ios.png"></a>
+                <a href="http://downurl.yingxiong.com/url/fc_jsgs.html"><img src="images/and.png"></a>
+            </span>
+            <div class="clear"></div>
+        </div>
+        <div class="btn">
+            <a href="main.html" class="btn-1"><img src="images/btn_1.png" /></a>
+            <a href="javascript:" class="btn-2"><img src="images/btn_2.png" /></a>
+        </div>
+    </div>
+<div class="share-bg"></div>
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content"> <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/public.js"></script>
+<script> 
+var md=document.getElementsByTagName("video")[0];
+    md.addEventListener("ended",function(){
+         $(".weiye").show();
+    });
+</script>
+<script type="text/javascript">
+$(".btn-2").click(function(){
+    $(".share-bg").show();
+});
+$(".share-bg").click(function(){
+    $(this).hide();
+});
+</script>
+	</body>
+</html>

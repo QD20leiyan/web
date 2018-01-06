@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset css*/
+/** Set default font family and font color and background color */
+html {font-family:'宋体',arial, verdana, sans-serif; color:#333; background:#fff;}
+
+/***** body *****/ 
+body{font-size:100%;  background:#fff }
+
+/*****Remove default margin and padding*****/
+body,dl,h1,h2,h3,h4,h5,h6,form,p{ margin:0; }
+input,button,textarea,td,th{padding: 0;}
+menu,ul,ol{ margin:0; padding:0}
+
+/***** Remove default vertical scrollbar in IE 8/9/10/11 and resize button*****/
+textarea{resize:none; overflow:auto}
+
+/***** Improve link behaviour*****/ 
+a{text-decoration:none; background-color: transparent;}
+a:active,a:hover { outline: 0;}
+
+/***** Prevent `sub` and `sup` affecting `line-height` in all browsers. *****/ 
+sub,sup {font-size: 75%; line-height: 0;position: relative; vertical-align: baseline;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/***** fix border problem *****/ 
+iframe,img{border:0;}
+
+/***** remove list style of ul and ol*****/ 
+ul,ol{list-style:none;}
+
+/***** input and button *****/ 
+button { overflow: visible;}
+button,select {text-transform: none;}
+button,html input[type="button"],input[type="reset"],input[type="submit"] { -webkit-appearance: button; cursor: pointer;}
+button[disabled],html input[disabled] { cursor: default;}
+button::-moz-focus-inner,input::-moz-focus-inner { border: 0; padding: 0;}
+button:-moz-focusring,input:-moz-focusring { outline: 1px dotted ButtonText;}
+input {line-height: normal;}
+input[type="checkbox"],input[type="radio"] { box-sizing: border-box; padding: 0;}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {height: auto;}
+input[type="search"] {-webkit-appearance: textfield;}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration { -webkit-appearance: none;}
+
+/***** table *****/ 
+table{border-collapse:collapse;border-spacing:0}
+
+/*****display behaviour *****/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {display: block;}
+audio,canvas,progress,video { display: inline-block; vertical-align: baseline;}
+audio:not([controls]) { display: none; height: 0;}
+[hidden],template { display: none;}
+
+/*****common classes *****/
+.clear{ clear:both}
+.inner{ position:relative; width:100%; height:100%}
+
+/***** 此处需要根据具体项目修改 *****/
+a,button,input,textarea,div{-webkit-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:rgba(0,0,0,0)}
+#videobox{position: absolute;width: 100%;height: 100%;background-color: #fff;background-image: url(../images/1.jpg);background-size: 100% 100%;background-position: top;overflow: hidden;}
+    #videoALL{
+  height: auto;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;object-fit: fill;
+  display: block;background-size: cover;overflow: hidden;}
+    #btn,#againbtn{width: 81px;height: 75px;position: absolute;-webkit-animation:scale 2s ease-out infinite ;animation:scale 2s ease-out infinite ;top: 37%;left:50%;opacity: 0.5;margin-top: -37.5px;margin-left: -40.5px;background-image: url(../images/btn.png);background-size: 100% 100%;}
+    #videoend{position: absolute;display: none;}
+@keyframes scale {
+0%,100%{
+	opacity:0.3;
+	transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+}
+50% {
+opacity: 0.5;
+-webkit-transform: scale(1);
+}
+}
+@webkit-keyframes scale {
+0%,100%{
+	opacity:0.3;
+	transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+}
+50% {
+opacity: 0.5;
+-webkit-transform: scale(1);
+}
+}

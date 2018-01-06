@@ -1,0 +1,202 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="format-detection"content="telephone=no">
+<title>一起来飞车送10000张电影票啦</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<style>
+/*    #videobox{position: absolute;width: 100%;height: 100%;background-image: url(images/two.jpg);background-size: 100% 100%;background-position: top;overflow: hidden;}*/
+    #videoALL{
+  height: auto;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;object-fit: fill;
+  display: block;background-size: cover;overflow: hidden;}
+    #btn,#againbtn{width: 100%;height: 100%;position: absolute;background-size: 100% 100%;opacity: 0;z-index: 99;background-image: url("images/btn.png")}
+    .vidend{width: 100%;height: 100%;position: absolute;top:0;left:0;display: none;background-image: url(images/weiye.jpg);background-size: cover;background-position: top;z-index: 9999}
+    .two{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        background-image: url(images/two.jpg);background-size: 100% 100%;background-position: top;overflow: hidden;
+    }
+    .handbox{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0,0.7);
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 99;
+    }
+    .imgs>img{
+        position: absolute;
+    }
+    .imgs img.a_01{
+        width: 100%;
+        height: 18%;
+        top: 0;
+        animation: move1 .5s linear 0.2;
+    }
+    .imgs img.a_02{
+        width: 100%;
+        height: 32%;
+        top: 18%;
+        animation: move1 .5s linear 0.9;
+    }
+    .imgs img.a_03{
+        width: 100%;
+        height: 50%;
+        top: 50%;
+        animation: move1 .5s linear 0s;
+    }
+    @keyframes move1{
+        0%{
+          opacity: 0;
+          top: 0;  
+        }
+        100{
+          opacity: 1;
+          top: 0;  
+        }
+    }
+    @keyframes move2{
+        0%{
+          opacity: 0;
+          top: 0;  
+        }
+        100{
+          opacity: 1;
+          top: 18%;  
+        }
+    }
+    @keyframes move3{
+        0%{
+          opacity: 0;
+          top: 0;  
+        }
+        100{
+          opacity: 1;
+          top: 50%;  
+        }
+    }
+</style>
+</head>
+
+<body>
+<div id="videobox">
+    <div class="imgs">
+        <img src="images/A_01.jpg" class="a_01" />
+        <img src="images/A_02.jpg" class="a_02" />
+        <img src="images/A_03.jpg" class="a_03" />
+    </div>
+    <div class="two"></div>
+   <video 
+    id="videoALL" 
+    src="video/1.mp4" 
+    poster="" 
+    preload="auto" 
+    webkit-playsinline="true" 
+    playsinline="true" 
+    x-webkit-airplay="allow" 
+    x5-video-player-type="h5" 
+    x5-video-player-fullscreen="true" 
+     x5-video-orientation="portraint"
+    style="object-fit:fill">
+    </video> 
+   <div id="btn" onclick="playcontr()"></div>
+</div>
+<div class="handbox">
+    <div id="hand" class="hand hand-animate"></div>
+    <p class="hand-p">你敢不敢把<br/>
+更多明星晃出来</p>
+    <div id="loading" class="loading"></div>
+    <div id="result" class="result">
+        <div class="pic"><img src="images/tou.png"></div>
+        <div class="con">您摇到了3位明星<br/>点击看看他们都说了些什么吧！</div>
+    </div>
+</div>
+<div class="vidend"></div>
+<!--
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content"> <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+</div>
+-->
+<script> 
+    $("#btn").one("click", function(){
+        setTimeout(function(){
+            $(".handbox").show();
+        },28000)
+    });
+    $("#result").click(function(){
+        $(".handbox").hide();
+        $(".imgs").hide();
+        $(".two").show();
+        $("#btn").show();
+        $("video").attr("src","video/31.mp4");
+        setTimeout(function(){
+            $(".vidend").show();
+        },46100)
+    })
+   
+</script>
+<script src="js/public.js"></script>
+<script>
+var videoALL = document.getElementById('videoALL'),
+    videobox = document.getElementById('videobox'),
+    btn = document.getElementById('btn'),
+    videoend =  document.getElementById('videoend');
+var clientWidth = document.documentElement.clientWidth;
+var clientHeight = document.documentElement.clientHeight;
+videoALL.style.width = clientWidth + 'px';
+videoALL.style.height = 'auto';
+document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
+
+function stylediv(divId){
+    divId.style.width = clientWidth + 'px';
+    divId.style.height = clientHeight + 'px'; 
+}
+stylediv(videobox);
+stylediv(videoend);
+
+var u = navigator.userAgent; 
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端 
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 
+
+function playcontr(){
+    if (isAndroid) {
+       videoALL.style.width = window.screen.width + 'px';
+       videoALL.style.height = window.screen.height + 'px'; 
+    }
+    videobox.style.display = "block";
+    videoALL.play();
+    btn.style.display = "none";
+    videoend.style.display = "none";
+};
+
+videoALL.addEventListener('pause',function(){  
+    videoALL.style.width = clientWidth + 'px';
+    btn.style.display = "block";
+})  
+
+videoALL.addEventListener("ended",function(){
+    videoALL.pause();
+    videobox.style.display = "none";
+    videoend.style.display = "block";
+});
+
+</script>
+</body>
+</html>

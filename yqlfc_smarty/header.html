@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>{$seo_title}</title>
+		<meta name="keywords" content="{$seo_key}" />
+    	<meta name="description" content="{$seo_desc}" />
+    	<!-- 这meta的作用就是删除默认的苹果工具栏和菜单栏。 -->
+    	<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-sca
+		le=1.0,maximum-scale=1.0, user-scalable=no"/>
+		<!-- title前的图片 -->
+		<link rel="shortcut icon" href="{$smarty.const.STATIC_DOMAIN}3.0/{$smarty.const.STATIC_DOMAIN}3.0/images/favicon.ico?{$smarty.const.VERSION}" />
+		<link rel="stylesheet" type="text/css" href="{$smarty.const.STATIC_DOMAIN}3.0/common/css/reset.css?{$smarty.const.VERSION}">
+		<link rel="stylesheet" href="{$smarty.const.STATIC_DOMAIN}3.0/common/css/common.min.css?{$smarty.const.VERSION}">
+		<link rel="stylesheet" href="{$smarty.const.STATIC_DOMAIN}3.0/common/css/swiper-3.4.2.min.css?{$smarty.const.VERSION}">
+		<link rel="stylesheet" type="text/css" href="{$smarty.const.STATIC_DOMAIN}3.0/css/index.css?{$smarty.const.VERSION}">
+		<script src="{$smarty.const.STATIC_DOMAIN}3.0/common/js/jquery-1.11.3.min.js?{$smarty.const.VERSION}"></script>
+		<script data-fixed="true">
+			if((/iphone|android|mobile/i.test(navigator.userAgent.toLowerCase()))) {
+				location.href = "m/index.html";
+			}
+		</script>
+		<script>
+            var _hmt = _hmt || [];
+		    (function() {
+		        var hm = document.createElement("script");
+		        hm.src = "//hm.baidu.com/hm.js?3ad2b20caaa89bc9c22e9c483d2b64c5";
+		        var s = document.getElementsByTagName("script")[0];
+		        s.parentNode.insertBefore(hm, s);
+		    })();
+    	</script>
+    	{csrf} 
+	</head>
+
+	<body class="body">
+		<script type="text/javascript" src="http://dev.static.yingxiong.com/head/js/topbar.min.js"></script>
+		<!--<iframe name="content_frame" marginwidth=0 marginheight=0 width=100% src="head.html" frameborder=0></iframe>-->
+		<div class="head">
+			<div class="wid_1200">
+				<a class="logo fl" href="index.html"><img src="{$smarty.const.STATIC_DOMAIN}3.0/{$smarty.const.STATIC_DOMAIN}3.0/images/logo.png?{$smarty.const.VERSION}" alt="logo"></a>
+				<div class="logo_txt">
+					<p class="p_01">一起来飞车</p>
+					<p class="p_02">首款3D漂移竞速手游</p>
+				</div>
+				<div class="fr">
+					<div class="link fl">
+						<ul>
+							<li class="li_index on">
+								<a target="_blank" href='{myurl name="/site/index"}'>首页</a>
+							</li>
+							<li class="li_news">
+								<a href="{myurl name='article/list, id=>194'}" target="_blank">资讯</a><span class="line"></span></li>
+							<li>
+								<a href="http://fc.yingxiong.com/special/match.html" target="_blank">赛事</a><span class="line"></span></li>
+							<li class="li_gong">
+								<a href="{myurl name='article/list, id=>196'}" target="_blank">攻略</a><span class="line"></span></li>
+							<li class="http://bbs.yingxiong.com/?fid=14">
+								<a href="http://bbs.yingxiong.com/html/Pc3.0/14.html?share_path=%2F#/" target="_blank">社区</a><span class="line"></span></li>
+						</ul>
+					</div>
+					<div class="ico_box fl">
+						<a class="ico_wx" href="javascript:void(0);">
+							<div class="ewm_wx">
+								<img src="{$smarty.const.STATIC_DOMAIN}3.0/images/ewm_wx.jpg" alt="ewm_wx">
+							</div>
+						</a>
+						<a class="ico_qq" href="http://shang.qq.com/wpa/qunwpa?idkey=79619666a0a5de2dcf5af029d33db1b88001ae68b9689c604c38404f3f947839"></a>
+						<a target="_blank" class="ico_bd" href="http://tieba.baidu.com/f?kw=%E4%B8%80%E8%B5%B7%E6%9D%A5%E9%A3%9E%E8%BD%A6&amp;fr=wwwt"></a>
+					</div>
+					<script type="text/javascript">
+						var url= window.location.href;
+						var index = url .lastIndexOf("\/");
+						url  = url .substring(index + 1, url .length);
+						if(url == "list_194_1.html"){
+							$(".li_news").addClass("on");
+						}else if(url == "list_196_1.html"){
+							$(".li_gong").addClass("on");
+						}else{
+							$(".li_index").addClass("on");
+						}
+					</script>
+				</div>
+			</div>
+		</div>

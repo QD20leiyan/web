@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同城飞车</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="public/animate.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<div class="all-container">
+    <div class="p-img-box">
+        <img class="wow slideInUp jin-zhu" src="images/jingzhu.png">
+        <img class="wow slideInUp p-logo" src="images/logo.png">
+    </div>
+    <div class="wow slideInUp item1"></div>
+    <div class="wow slideInUp item2">
+        <p>《一起来飞车》为回馈新老玩家，联合同程旅游网，
+            打造全国“想飞就飞”千万机票计划。不管是金秋旅游，
+            还是异地求学，登陆游戏即可享受为一起来飞车玩家打造的专属福利。
+        </p>
+        <a href="javascript:" id="get_game_lb"></a>
+    </div>
+    <div class="wow slideInUp item3">
+        <p>第一步.  登陆《一起来飞车》游戏<br>
+            第二步.  打开游戏活动公告，参与“想飞就飞”千万机票计划，点击领取红包
+        </p>
+        <h2>共200000份大礼</h2>
+    </div>
+    <div class="wow slideInUp item4">
+        <label class="i4-title"></label>
+        <ul>
+            <li>
+                <img src="images/jp_icon.png" alt="">
+                <p>机票红包</p>
+            </li>
+            <li>
+                <img src="images/jd_icon1.png" alt="">
+                <p>景点红包</p>
+            </li>
+            <li class="no-margin">
+                <img src="images/jd_icon2.png" alt="">
+                <p>酒店红包</p>
+            </li>
+        </ul>
+        <a href="javascript:"></a>
+    </div>
+</div>
+<!--这是弹窗页面-->
+<div class="tc-container">
+    <form id="tc_form" class="tc_form p-all-center">
+        <div class="tc-item">
+            <label>手机号码</label>
+            <div>
+                <input id="tc-phone" type="text">
+                <p>请输入手机号码</p>
+            </div>
+            <p class="tc-err">
+                <label></label>
+                <span>请输入手机号码</span>
+            </p>
+        </div>
+
+        <div class="tc-item tc-item2">
+            <label>验证码</label>
+            <div class="tc-yzm-inp">
+                <input id="tc-mark" type="text">
+                <p>请输入验证码</p>
+            </div>
+            <button id="getMark" type="button">发送验证码</button>
+            <p class="tc-err">
+                <label></label>
+                <span>请输入验证码</span>
+            </p>
+        </div>
+        <a href="javascript:" id="tc_btn1" class="tc-btn"></a>
+        <label class="tc_close"></label>
+    </form>
+    <div id="tc_success" class="tc_success p-all-center">
+        <h1>恭喜您获得【一起来飞车】同程旅游激活码</h1>
+        <p>您的激活码是：<span>DQIAAAAERTDX850</span></p>
+        <a href="javascript:" id="tc_btn2" class="tc-btn"></a>
+        <label class="tc_close"></label>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="public/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="public/wow.min.js"></script>
+<!--[if gt IE 8]>
+<script type="text/javascript">
+    new WOW().init();
+</script>
+<![endif]-->
+<script type="text/javascript">
+    //页面加载完成回到顶部
+    window.onload = function(){
+        setTimeout(function(){
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        },20);
+    };
+    $(function(){
+        //页面事件
+        //点击获取游戏礼包
+        $("#get_game_lb").click(function(){
+            $(".tc-container").css({
+                display: "block"
+            });
+            setTimeout(function(){
+                $(".tc-container").css({
+                    opacity: 1
+                });
+                $("#tc_form").show();
+            },20);
+        });
+
+        //点击输入框
+        $(".tc-item > div").click(function(){
+            var input = $(this).children("input");
+            var p = $(this).children("p");
+            p.hide();
+            input.focus();
+        });
+        $(".tc-item > div > input").blur(function(){
+            var val = $(this).val();
+            var my_p = $(this).parent().children("p");
+            if(val == "" || val == null){
+                my_p.show();
+            }
+        });
+        //获取验证码
+        $("#getMark").click(function(){
+            var myThis = $(this);
+            var name = myThis.attr("name");
+            if(name){
+                return;
+            }
+            var tc_phone = $("#tc-phone");
+            if(checkPhone(tc_phone) !== true){
+                return false;
+            }
+            myThis.attr("name","false");
+            //开始倒计时
+            countDown($(this),60,function(){
+                console.log(myThis);
+                myThis.html("发送验证码").attr("name","");
+            });
+        });
+
+        //获取激活码
+        $("#tc_btn1").click(function(){
+            var myThis = $(this);
+            var name = myThis.attr("name");
+            if(name){
+                return;
+            }
+            var tc_phone = $("#tc-phone");
+            if(checkPhone(tc_phone) !== true){
+                return false;
+            }
+            var tc_mark = $("#tc-mark");
+            if(checkMark(tc_mark) !== true){
+                return false;
+            }
+
+        });
+
+        //取消弹窗
+        $(".tc_close").click(function(){
+            $(".tc-container").css({
+                opacity: 0
+            });
+            setTimeout(function(){
+                $(".tc-container").css({
+                    display: "none"
+                });
+            },200);
+        });
+
+        //判断用户填写的手机号码是否正确
+        function checkPhone(ele){
+            var tc_err = ele.parent().parent().children("p[class='tc-err']");
+            var myPhone = ele.val();
+            if(myPhone == "" || myPhone == null){
+                showErr(tc_err,"请输入手机号码");
+                return false;
+            }
+            if(!(/^1[34578]\d{9}$/.test(myPhone))){
+                showErr(tc_err,"请输入正确的手机号码");
+                return false;
+            }
+            hideErr(tc_err);
+            return true;
+        }
+
+        //判断用户填写的验证码是否正确
+        function checkMark(ele){
+            var tc_err = ele.parent().parent().children("p[class='tc-err']");
+            var myPhone = ele.val();
+            if(myPhone == "" || myPhone == null){
+                showErr(tc_err,"请输入验证码");
+                return false;
+            }
+            if(!(/^[0-9]*$/.test(myPhone))){
+                showErr(tc_err,"请输入正确的验证码");
+                return false;
+            }
+            hideErr(tc_err);
+            return true;
+        }
+
+        //显示错误信息
+        function showErr(ele,text){
+            var textEle = ele.children("span");
+            textEle.html(text);
+            ele.css({
+                visibility: "visible"
+            });
+        }
+        //隐藏错误信息
+        function hideErr(ele){
+            ele.css({
+                visibility: "hidden"
+            });
+        }
+        //倒计时
+        function countDown(ele,time,callBack){
+            var time = parseInt(time);
+            ele.html(time+"s");
+            var timer = setInterval(function(){
+                time--;
+                if(time == 0){
+                    clearInterval(timer);
+                    if(callBack){
+                        callBack();
+                    }
+                    return;
+                }
+                ele.html(time+"s");
+            },1000);
+        }
+    });
+</script>
+</html>

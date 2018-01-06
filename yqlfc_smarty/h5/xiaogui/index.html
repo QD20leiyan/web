@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一起来飞车</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<style type="text/css">  
+		body {  
+			overflow-x:hidden;  
+			overflow-y:hidden;  
+			position: relative;
+		}  
+	</style>  
+	  
+	<style type="text/css">  
+		html {  
+			overflow-x:hidden;  
+			overflow-y:hidden;  
+		}  
+	</style> 
+	<script>
+		(function (doc, win) {
+		  var docEl = doc.documentElement,
+		    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize
+		      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		      recalc = function () {
+		        //clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框
+		        var clientWidth = docEl.clientWidth;
+		        if (!clientWidth) return;
+		        docEl.style.fontSize = 16*(clientWidth / 320) + 'px';
+		      };
+		 
+		  recalc();
+		  //判断是否支持监听事件 ，不支持则停止
+		  if (!doc.addEventListener) return;
+		  //注册翻转事件
+		  win.addEventListener(resizeEvt, recalc, false);
+		 
+		})(document, window);
+	</script>
+</head>
+</head>
+<body>
+	<div class="box">
+		<img src="./images/p_music_play_06.png" class="bg_play bg_play_1">
+		<img src="./images/pic_02.png" class="logo">
+		<img src="./images/pic_03.png" class="box_tips">
+	</div>
+	<div class="box_con">
+		<img src="./images/pic_05.png" class="box_con_sup">
+		<img src="./images/pic_04.png" class="box_con_cd">
+		
+		<div class="box_bunter">
+			<!-- <div class="box_bunter_t">
+				<h3>《一起来飞车》主题曲《新生代》</h3>
+				<p>AKA.imp小鬼首支个人单曲试听</p>
+			</div> -->
+			<div class="box_bunter_b">
+				<div class="box_bunter_b1"><img src="./images/pic_13.png"></div>
+				<p>点击播放</p>
+			</div>
+		</div>
+		<div class="txt"><img src="images/txt.png"></div>
+		<div class="song_text" style="display: none;">
+			<P class="p0"></P>
+			<P class="p1"></P>
+			<P class="p2"></P>
+			<P class="p3"></P>
+			<P class="p4"></P>
+		</div>
+		<div class="song_controller" style="display: none;" >
+			<div class="song_line"></div>
+			<div class="song_name">
+				<h1>《一起来飞车》主题曲《新生代》</h1>
+				<p>AKA.imp小鬼首支个人单曲28秒尝鲜试听</p>
+				<div class="song_play">
+					<img src="./images/pic_07.png" class="play1">
+					<img src="./images/pause.png" class="play2" style="display:none">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="end">
+		<img src="./images/pic_05.png" class="box_con_sup">
+		<img src="./images/pic_04.png" class="box_con_cd">
+		<div class="relation boxs">
+			<p class="return" onclick="relisten()"><img src="images/return.png" /></p>
+			<p class="wx" onclick="attention()"><img src="images/wx.png"></p>
+			<p class="share"><img src="images/share.png"></p>
+			<p class="down loadgame"><img src="images/down.png"></p>
+			<p class="logo_1"><img src="images/logo_1.png" /></p>
+		</div>
+		<!-- <div class="relation" >
+			<div onclick="relisten()" class="morelisten">
+				<div class="listen_icon icon">
+					<img src="./images/pic_10.png">
+				</div>
+				<div class="relation_text">
+					<div>再听一遍</div>
+				</div>			
+			</div>
+			<div onclick="attention()">
+				<div class="listenall icon">
+					<img src="./images/pic_09.png">
+				</div>
+				<div class="relation_text">
+					<div>收听完整版</div>
+					<div class="small">请关注官方公众号</div>
+				</div>
+				
+			</div>
+			<div class="share">
+				<div class="share_icon icon">
+					<img src="./images/pic_11.png">
+				</div>
+				<div class="relation_text">
+					<div>转发分享</div>
+				</div>
+				
+			</div>
+			<div class="loadgame">
+				<div class="icon">
+					<img src="./images/pic_12.png">
+				</div>
+				<div class="relation_text">
+					<div>下载游戏</div>
+					<div class="small">赢小鬼签名海报 送游戏豪车礼包</div>
+				</div>
+				
+			</div>
+		</div> -->
+		<img src="./images/p_music_play_06.png" class="end_play end_play_1">
+	</div>
+
+
+
+	<div class="cover"></div>
+	<div class="qrcode">
+		<div class="qecode_imgbox">
+			<img src="./images/qrcode.png" class="qecode_img">
+			<img src="./images/close.png" class="close">
+		</div>
+		
+	</div>
+	<div class="share_bg"><img src="./images/share_bg.png" ></div>
+	<!--背景-->
+	<audio src="bg.mp3" controls="controls" autoplay="autoplay" loop  id="bgmusic"></audio>
+
+	<audio src="a.mp3" controls="controls"   id="music1"></audio>
+
+	<script src="./js/jquery-1.11.2.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script>
+	
+		var sontText = [
+			"我已经带上潮流派的勋章",
+			"你知道这是新生代的赛场金刚",
+			"从来不会让支持我的兄弟心伤",
+			"我会让我的对手全部输个精光",
+			"我的力量在骨中用梦想来补充",
+			"赛车随风起舞中年纪轻轻做股东",
+			"这是新生代的道义刚出生的孙悟空",
+			"教你潮流派的道理七十二变会武功"
+		];
+		var audio = document.getElementById('music1');
+		var bgAudio = document.getElementById('bgmusic');
+
+		autoPlayAudio(bgAudio);
+		var w = window.innerWidth;
+		var timer = null;
+
+		$(".box_bunter_b1 img").on("click",function(e){
+			e.stopPropagation();
+			$(".box_bunter,.txt img").hide();
+			$(".song_text").show();
+			$(".song_controller").show();
+			$(".song_play").find(".play2").hide();  //停止按钮
+			$(".song_play").find(".play1").show();  //播放按钮
+			$(".box_con_cd").addClass("cd_rotate");
+			audio.play();
+			//autoPlayAudio(audio);
+			var theLen = audio.duration
+   			timer = setInterval(function () {
+		       	var currentTime = audio.currentTime;
+		       	var currentWidth = (w*currentTime)/theLen
+		       	setTimeShow(currentWidth);
+		       
+		       	if(4>currentTime&&currentTime>0){
+		       		$(".p0").text("");
+		       		$(".p1").text("");
+		       		$(".p2").text(sontText[0]);
+		       		$(".p3").text(sontText[1]);
+		       		$(".p4").text(sontText[2]);
+		       	}else if(6>currentTime&&currentTime>4){
+		       		$(".p0").text("");
+		       		$(".p1").text(sontText[0]);
+		       		$(".p2").text(sontText[1]);
+		       		$(".p3").text(sontText[2]);
+		       		$(".p4").text(sontText[3]);
+		       	}else if(9>currentTime&&currentTime>6){
+		       		$(".p0").text(sontText[0]);
+		       		$(".p1").text(sontText[1]);
+		       		$(".p2").text(sontText[2]);
+		       		$(".p3").text(sontText[3]);
+		       		$(".p4").text(sontText[4]);
+		       	}else if(12>currentTime&&currentTime>9){
+		       		$(".p0").text(sontText[1]);
+		       		$(".p1").text(sontText[2]);
+		       		$(".p2").text(sontText[3]);
+		       		$(".p3").text(sontText[4]);
+		       		$(".p4").text(sontText[5]);
+		       	}else if(14>currentTime&&currentTime>12){
+		       		$(".p0").text(sontText[2]);
+		       		$(".p1").text(sontText[3]);
+		       		$(".p2").text(sontText[4]);
+		       		$(".p3").text(sontText[5]);
+		       		$(".p4").text(sontText[6]);
+		       	}else if(17>currentTime&&currentTime>14){
+		       		$(".p0").text(sontText[3]);
+		       		$(".p1").text(sontText[4]);
+		       		$(".p2").text(sontText[5]);
+		       		$(".p3").text(sontText[6]);
+		       		$(".p4").text(sontText[7]);
+		       	}else if(19>currentTime&&currentTime>17){
+		       		$(".p0").text(sontText[4]);
+		       		$(".p1").text(sontText[5]);
+		       		$(".p2").text(sontText[6]);
+		       		$(".p3").text(sontText[7]);
+		       		$(".p4").text("");
+		       	}else if(theLen>currentTime&&currentTime>19){
+		       		$(".p0").text(sontText[5]);
+		       		$(".p1").text(sontText[6]);
+		       		$(".p2").text(sontText[7]);
+		       		$(".p3").text("");
+		       		$(".p4").text("");
+		       	}
+		    },500 );
+		})
+
+
+
+
+		function toPlay(){   //进入二级页面播放
+
+			$(".box").addClass("box_hide");
+			$(".box_con").addClass("box_con_show");
+			$(".box_con_cd").removeClass("cd_rotate");
+			//$(".box").hide();
+			//$(".box_con").show();
+			//$(".song_controller").show();
+			pauseAudio(bgAudio)
+			//bgAudio.pause();
+			//audio.play();  //自动播放
+			
+			//autoPlayAudio(audio); //自动播放
+			//添加歌词
+
+			$(".song_play").find(".play2").hide();  //停止按钮
+			$(".song_play").find(".play1").show();  //播放按钮
+			$(".p0").text("");
+       		$(".p1").text("");
+       		$(".p2").text(sontText[0]);
+       		$(".p3").text(sontText[1]);
+       		$(".p4").text(sontText[2]);
+
+
+			//$(".box_con_cd").addClass("cd_rotate");
+			
+
+			
+			
+		}
+
+		$(".song_play").on("click",function(e){
+			
+			if(audio.paused){
+				audio.play();
+				$(".song_play").find(".play2").hide();  //停止按钮
+				$(".song_play").find(".play1").show();  //播放按钮
+				$(".box_con_cd").addClass("cd_rotate");
+				var theLen = audio.duration
+	   			setInterval(function() {
+			       	var currentTime = audio.currentTime;
+			       	var currentWidth = (w*currentTime)/theLen
+			       	setTimeShow(currentWidth);
+			       
+			       	if(4>currentTime&&currentTime>0){
+			       		$(".p0").text("");
+			       		$(".p1").text("");
+			       		$(".p2").text(sontText[0]);
+			       		$(".p3").text(sontText[1]);
+			       		$(".p4").text(sontText[2]);
+			       	}else if(6>currentTime&&currentTime>4){
+			       		$(".p0").text("");
+			       		$(".p1").text(sontText[0]);
+			       		$(".p2").text(sontText[1]);
+			       		$(".p3").text(sontText[2]);
+			       		$(".p4").text(sontText[3]);
+			       	}else if(9>currentTime&&currentTime>6){
+			       		$(".p0").text(sontText[0]);
+			       		$(".p1").text(sontText[1]);
+			       		$(".p2").text(sontText[2]);
+			       		$(".p3").text(sontText[3]);
+			       		$(".p4").text(sontText[4]);
+			       	}else if(12>currentTime&&currentTime>9){
+			       		$(".p0").text(sontText[1]);
+			       		$(".p1").text(sontText[2]);
+			       		$(".p2").text(sontText[3]);
+			       		$(".p3").text(sontText[4]);
+			       		$(".p4").text(sontText[5]);
+			       	}else if(14>currentTime&&currentTime>12){
+			       		$(".p0").text(sontText[2]);
+			       		$(".p1").text(sontText[3]);
+			       		$(".p2").text(sontText[4]);
+			       		$(".p3").text(sontText[5]);
+			       		$(".p4").text(sontText[6]);
+			       	}else if(17>currentTime&&currentTime>14){
+			       		$(".p0").text(sontText[3]);
+			       		$(".p1").text(sontText[4]);
+			       		$(".p2").text(sontText[5]);
+			       		$(".p3").text(sontText[6]);
+			       		$(".p4").text(sontText[7]);
+			       	}else if(19>currentTime&&currentTime>17){
+			       		$(".p0").text(sontText[4]);
+			       		$(".p1").text(sontText[5]);
+			       		$(".p2").text(sontText[6]);
+			       		$(".p3").text(sontText[7]);
+			       		$(".p4").text("");
+			       	}else if(theLen>currentTime&&currentTime>19){
+			       		$(".p0").text(sontText[5]);
+			       		$(".p1").text(sontText[6]);
+			       		$(".p2").text(sontText[7]);
+			       		$(".p3").text("");
+			       		$(".p4").text("");
+			       	}
+			    },500 );
+			}else{
+				audio.pause();
+				$(".song_play").find(".play2").show();
+				$(".song_play").find(".play1").hide();
+				$(".box_con_cd").removeClass("cd_rotate");
+			}
+		});
+
+		// 播放结束
+		audio.addEventListener("ended", function(e){
+			
+			$(".song_play").find(".play2").show();
+			$(".song_play").find(".play1").hide();
+			$(".box_con_cd").removeClass("cd_rotate");
+
+			// $(".song_text").hide();
+			// $(".song_controller").hide();
+			// $(".relation").show();
+			bgAudio.play();
+			$(".box_con").addClass("box_con_hide");
+			$(".end").addClass("end_show");
+
+			$(".song_text,.txt img").hide();
+			$(".song_controller").hide();
+			$(".box_bunter").show();
+			$(".p0").text("");
+       		$(".p1").text("");
+       		$(".p2").text(sontText[0]);
+       		$(".p3").text(sontText[1]);
+       		$(".p4").text(sontText[2]);
+       		clearInterval(timer);
+
+		})
+		//进度条
+		function setTimeShow(currentWidth){
+	    	$(".song_line").innerWidth(currentWidth)
+	    };
+	    //再听一遍函数
+	    function relisten(){
+	  //   	$(".song_text").show();
+			// $(".song_controller").show();
+			// $(".relation").hide();
+			bgAudio.pause();
+			audio.pause();
+			// $(".song_play").find(".play2").show();  //停止按钮
+			// $(".song_play").find(".play1").hide();  //播放按钮
+			// $(".box_con_cd").removeClass("cd_rotate");
+			//setTimeShow("0px")   //设置精度条为0；
+
+			$(".box_con").removeClass("box_con_hide");
+			$(".end").removeClass("end_show")
+
+	    };
+	    function attention(){
+	    	$(".cover").show();
+	    	$(".qrcode").show();
+	    }
+	    $(".close").on("click",function(e){
+	    	e.stopPropagation();
+	    	$(".cover").hide();
+	    	$(".qrcode").hide();
+	    });
+	    $(".loadgame").on("click",function(e){
+	    	e.stopPropagation();
+	    	location.href="http://downurl.yingxiong.com/url/fc_xgh5.html";
+	    });
+	    $(".share").on("click",function(e){
+	    	e.stopPropagation();
+	    	$(".share_bg").show();
+	    });
+	    $(".share_bg img").on("click",function(e){
+	    	e.stopPropagation();
+	    	$(".share_bg").hide();
+	    })
+
+
+        function autoPlayAudio(audio){  
+		   
+		    audio.play();  
+		    document.addEventListener("WeixinJSBridgeReady", function () {  
+		            audio.play();  
+		    }, false);  
+		    document.addEventListener('YixinJSBridgeReady', function() {  
+		        audio.play();  
+		    }, false);  
+		}  
+		//audioAutoPlay('Jaudio'); 
+    	function pauseAudio(audio){  
+		   
+		    audio.pause();  
+		    document.addEventListener("WeixinJSBridgeReady", function () {  
+		            audio.pause();  
+		    }, false);  
+		    document.addEventListener('YixinJSBridgeReady', function() {  
+		        audio.pause();  
+		    }, false);  
+		}  
+
+
+		document.addEventListener("WeixinJSBridgeReady", function () {  
+	        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {  
+	            audio.play();  
+	            audio.pause();  
+	           	// bgAudio.play();  
+	            // bgAudio.pause();  
+	        });  
+	    }, false);  
+
+
+		var startx, starty;
+        //获得角度
+        function getAngle(angx, angy) {
+            return Math.atan2(angy, angx) * 180 / Math.PI;
+        };
+     
+        //根据起点终点返回方向 1向上 2向下 3向左 4向右 0未滑动
+        function getDirection(startx, starty, endx, endy) {
+            var angx = endx - startx;
+            var angy = endy - starty;
+            var result = 0;
+     
+            //如果滑动距离太短
+            if (Math.abs(angx) < 2 && Math.abs(angy) < 2) {
+                return result;
+            }
+     
+            var angle = getAngle(angx, angy);
+            if (angle >= -135 && angle <= -45) {
+                result = 1;
+            } else if (angle > 45 && angle < 135) {
+                result = 2;
+            } else if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {
+                result = 3;
+            } else if (angle >= -45 && angle <= 45) {
+                result = 4;
+            }
+     
+            return result;
+        }
+        //手指接触屏幕
+        document.addEventListener("touchstart", function(e) {
+            startx = e.touches[0].pageX;
+            starty = e.touches[0].pageY;
+        }, false);
+        //手指离开屏幕
+        document.addEventListener("touchend", function(e) {
+        	
+        	if($(e.srcElement).hasClass("box")){
+        		var endx, endy;
+	            endx = e.changedTouches[0].pageX;
+	            endy = e.changedTouches[0].pageY;
+	            var direction = getDirection(startx, starty, endx, endy);
+	            switch (direction) {
+	                case 0:
+	                    //alert("未滑动！");
+	                    break;
+	                case 1:
+	                	
+	                    //alert("向上！")
+	                    break;
+	                case 2:
+	                    //alert("向下！")
+	                    break;
+	                case 3:
+	                	//alert(11);
+	                	toPlay();
+	                    //alert("向左！")
+	                    break;
+	                case 4:
+	                    //alert("向右！")
+	                    break;
+	                default:
+	            }
+        	}
+            
+        }, false);
+        $(".bg_play").on("click",function(e){
+        	e.stopPropagation();
+        	if(bgAudio.paused){
+        		autoPlayAudio(bgAudio)
+        		$(".bg_play").addClass("bg_play_1");
+        		$(".bg_play").attr("src","./images/p_music_play_06.png");
+        	}else{
+        		pauseAudio(bgAudio)
+        		$(".bg_play").removeClass("bg_play_1");
+        		$(".bg_play").attr("src","./images/p_music_03.png");
+        		//alert("播放");
+        	}
+        	
+        });
+        $(".end_play").on("click", function(e){
+        	e.stopPropagation();
+        	if(bgAudio.paused){
+        		autoPlayAudio(bgAudio)
+        		$(".end_play").addClass("end_play_1");
+        		$(".end_play").attr("src","./images/p_music_play_06.png");
+        	}else{
+        		pauseAudio(bgAudio)
+        		$(".end_play").removeClass("end_play_1");
+        		$(".end_play").attr("src","./images/p_music_03.png");
+        		//alert("播放");
+        	}
+        })
+	</script>
+</body>
+</html>

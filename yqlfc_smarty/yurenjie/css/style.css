@@ -1,0 +1,224 @@
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, table,th, td, form,input, button, textarea, menu {
+    font-family: "微软雅黑",Arial;
+    margin: 0;
+    padding: 0;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html, body,img, iframe{
+    border: 0 none;
+}
+html, body{
+    overflow: hidden;
+}
+li {
+    list-style: outside none none;
+}
+.start-bg,.result{
+	width: 100%;
+	height:53.33rem;
+    position: relative;
+}
+.result p,.share p{
+    width: 100%;
+    text-align: center;
+    color: #005a62;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 3%;
+    z-index: 999999;
+    font-family: '微软雅黑';
+}
+.start-bg{
+    background: url(../images/start-bg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.inp{
+     width: 70%;
+    margin: auto;
+     position: absolute;
+    bottom: 52%;
+    left: 50%;
+    margin-left: -35%;
+}
+.inp input[type='text']{
+    width: 100%;
+    display: block;
+    padding: 15px 0px;
+    margin: auto;
+    background: #9b1e1e;
+    border: 1px solid #d84747;
+    color: #ffa4a4;
+    text-align: center;
+    font-size: 1.4rem;
+    outline: none;
+}
+.start-bg button,.result button,.share button{
+    position: absolute;
+/*    background: none;*/
+    border: 0px;
+    margin: auto;
+    bottom: 34.5%;
+    outline: none;
+}
+.start-bg button{
+     bottom: 39.5%;
+    width: 60%; 
+    margin-left: -30%;
+    left: 50%;
+}
+.start-bg button img,.result button img{
+    width: 100%;
+}
+.result {
+    background: url(../images/bg.jpg) repeat;
+    height: auto;
+    
+/*
+    background-size: cover;
+    background-attachment: fixed;
+*/
+    position: relative;
+}
+.button{
+    width: 100%;
+    background: url(../images/bottom-bg.jpg) no-repeat center;
+    height:4.5rem;
+    position: absolute;
+    bottom: 0px;
+    z-index: 9999;
+    background-size: 100% 4.5rem;
+}
+.result button{
+    width: 45%;
+    margin-left: -22.5%;
+    bottom: 34%;
+    left: 50%;
+}
+#main canvas{
+    position: absolute;
+    top: -18% !important;
+    width: 100% !important;
+    height: 38.56rem !important;
+    left: 52% !important;
+    user-select: none;
+    margin-left: -50% !important;
+}
+
+.share-btn {
+    width: 100% !important;
+}
+.share-btn img{
+    display: inline-block;
+    width: 40% !important;
+    text-align: center;
+   
+}
+.share-btn img{
+    margin: 18px 12px;
+}
+/*
+.share-btn img:nth-of-type(1){
+     margin: 18px auto;
+}
+.share-btn img:nth-of-type(2){
+     margin: 0px auto 0px 17px;
+}
+*/
+.share {
+    width: 100%;
+	height:53.33rem;
+    position: relative;
+    background: url(../images/share.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.shade,.download {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.shade{
+    background: url(../images/share_bg.png) no-repeat;
+    background-size: cover;
+}
+.download{
+      background: url(../images/download.png) no-repeat;
+      background-size: cover;
+}
+
+#main>div{
+    width: 100% !important;
+    height: 40.75rem !important;
+}
+.public{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+     background: url(../images/bg.jpg) repeat;
+}
+.public .inp{
+    bottom: 171px;
+}
+.public .start{
+    bottom: 57px;
+}
+.public .start-btn{
+    bottom: 5%;
+}
+.start-btn{
+background: none;
+}
+.public .share-btn{
+    bottom: 0px;
+}
+
+.img {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -25%;
+    top: -130%;
+}
+.img img{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.title {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    margin-left: -40%;
+    top: 18%;
+
+}
+.title  img{
+    width: 100%;
+}
+
+.title-bg {
+    width: 100%;
+    background: url(../images/title-bottom.jpg) no-repeat;
+    background-size: 100% 15.32rem;
+    height: 15.32rem;
+    bottom: 0;
+    position: absolute;
+}
+
+.line {
+    width: 20%;
+    height: 1px;
+    background: #d69c94;
+    position: absolute;
+    top: -47%;
+}
+.line1{
+    right: 0px;
+}

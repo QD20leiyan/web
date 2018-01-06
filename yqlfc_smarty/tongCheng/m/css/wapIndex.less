@@ -1,0 +1,328 @@
+@size: 32rem;
+.p-x-center{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.no-margin {
+  margin: 0 !important;
+}
+html,body{
+  font-family: "Microsoft YaHei", "Helvetica Neue", Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
+}
+input, button{
+  border: none;
+  outline-style: none;
+}
+.container{
+  width: 100%;
+  height: 1372/@size;
+  position: relative;
+  overflow: hidden;
+  background: url("../images/bimg.png") no-repeat;
+  background-size: cover;
+}
+.tc{
+  width: 144/@size;
+  height: 34/@size;
+  top: 24/@size;
+}
+.logo{
+  position: absolute;
+  top: 10/@size;
+  right: 110/@size;
+}
+.item1{
+  width: 541/@size;
+  height: 205/@size;
+  margin: 0 auto;
+  margin-top: 326/@size;
+  background: url("../images/item1.png") no-repeat;
+  background-size: cover;
+}
+.item2{
+  width: 540/@size;
+  height: 250/@size;
+  margin: 0 auto;
+  margin-top: 25/@size;
+  overflow: hidden;
+  background: url("../images/item2.png") no-repeat;
+  background-size: cover;
+  p{
+    width: 100%;
+    height: auto;
+    margin: 72/@size 0 0 0;
+    padding: 0 40/@size;
+    line-height: 26/@size;
+    color: #fff;
+    font-size: 14/@size;
+    box-sizing: border-box;
+  }
+  a{
+    display: block;
+    width: 474/@size;
+    height: 60/@size;
+    margin: 0 auto;
+    background: url("../images/btn1.png") no-repeat;
+    background-size: cover;
+  }
+}
+.item3{
+  width: 540/@size;
+  height: 218/@size;
+  margin: 0 auto;
+  margin-top: 25/@size;
+  overflow: hidden;
+  background: url("../images/item3.png") no-repeat;
+  background-size: cover;
+  p{
+    width: 100%;
+    height: auto;
+    margin-top: 104/@size;
+    color: #fff;
+    line-height: 26/@size;
+    font-size: 16/@size;
+    padding: 0 35/@size;
+    box-sizing: border-box;
+  }
+  h2{
+    width: 100%;
+    height: auto;
+    padding: 0 30/@size 0 0;
+    margin-top: 6/@size;
+    color: #a892f5;
+    text-align: right;
+    font-size: 18/@size;
+    box-sizing: border-box;
+  }
+}
+.item4{
+  width: 100%;
+  height: auto;
+  margin: 34/@size 0 0 0;
+  label{
+    display: block;
+    width: 532/@size;
+    height: 28/@size;
+    margin: 0 auto;
+    margin-bottom: 30/@size;
+    background: url("../images/lqjl.png") no-repeat;
+    background-size: cover;
+  }
+  ul{
+    width: 532/@size;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 6/@size;
+    box-sizing: border-box;
+    overflow: hidden;
+    li{
+      float: left;
+      width: 149/@size;
+      height: 146/@size;
+      margin: 0 36/@size 0 0;
+      background: url("../images/box_bimg.png") no-repeat;
+      background-size: cover;
+      img{
+        width: 110/@size;
+        height: 90/@size;
+        display: block;
+        margin: 0 auto;
+        margin-top: 16/@size;
+      }
+      p{
+        width: 100%;
+        height: auto;
+        margin: 6/@size 0 0 0;
+        color: #a892f5;
+        font-size: 20/@size;
+        text-align: center;
+      }
+    }
+  }
+  a{
+    display: block;
+    width: 467/@size;
+    height: 60/@size;
+    margin: 0 auto;
+    margin-top: 10/@size;
+    background: url("../images/btn2.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+/*这是弹窗*/
+.p-all-center{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.tc_close{
+  position: absolute;
+  display: block;
+  width: 30/@size;
+  height: 30/@size;
+  padding: 5/@size;
+  top: 16/@size;
+  right: 25/@size;
+  background: url("../images/tc_close.png") no-repeat;
+  background-size: 30/@size 30/@size;
+  background-position: center;
+}
+.tc-container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  display: none;
+  background: rgba(0,0,0,.7);
+  transition: all .2s;
+  -webkit-transition: all .2s;
+}
+
+.tc-container > form{
+  width: 584/@size;
+  height: 417/@size;
+  background: url("../images/tc_bimg.png") no-repeat;
+  background-size: cover;
+  >p{
+    width: 534/@size;
+    margin: 0 auto;
+    font-size: 12/@size;
+    color: #fff;
+    text-align: center;
+    line-height: 28/@size;
+  }
+  a{
+    display: block;
+    width: 534/@size;
+    height: 84/@size;
+    margin: 0 auto;
+    background: url("../images/tc_btn1.png") no-repeat;
+    background-size: cover;
+  }
+}
+.tc-item{
+  width: 534/@size;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 60/@size;
+  overflow: hidden;
+  label{
+    display: block;
+    width: 100/@size;
+    height: 100%;
+    float: left;
+    line-height: 60/@size;
+    color: #cbcbcb;
+    font-size: 22/@size;
+  }
+  div{
+    width: 420/@size;
+    height: 100%;
+    position: relative;
+    float: left;
+    margin: 0 0 0 14/@size;
+    input{
+      width: 100%;
+      height: 60/@size;
+      font-size: 24/@size;
+      text-indent: 10/@size;
+      color: #ececec;
+      line-height: 60/@size;
+      background: #2f2b3f;
+    }
+  }
+}
+.tc-item2{
+  margin-top: 0;
+  div{
+    width: 220/@size;
+    height: 100%;
+    position: relative;
+    input{
+      width: 100%;
+      height: 60/@size;
+      font-size: 24/@size;
+      text-indent: 10/@size;
+      color: #ececec;
+      line-height: 60/@size;
+      background: #2f2b3f;
+    }
+  }
+  button{
+    float: right;
+    width: 166/@size;
+    height: 60/@size;
+    line-height: 60/@size;
+    font-size: 20/@size;
+    color: #662009;
+    background: url("../images/yzm_btn.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.tc-err{
+  width: 420/@size;
+  height: auto;
+  visibility: hidden;
+  float: right;
+  font-size: 16/@size;
+  color: #f1363a;
+  margin: 8/@size 0 10/@size 0;
+  label {
+    display: inline-block;
+    width: 14/@size;
+    height: 14/@size;
+    margin: 0 4/@size 0 0;
+    background: url("../images/tc_errIocn.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.tc-container > div{
+  display: none;
+  width: 584/@size;
+  height: 417/@size;
+  background: url("../images/tc_bimg.png") no-repeat;
+  background-size: cover;
+  h1{
+    width: 66%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 80/@size;
+    font-size: 32/@size;
+    color: #cbcbcb;
+    text-align: center;
+    line-height: 46/@size;
+  }
+  p{
+    width: 66%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40/@size;
+    font-size: 22/@size;
+    color: #cbcbcb;
+    text-align: center;
+    line-height: 46/@size;
+    span{
+      color: #f1d84d;
+    }
+  }
+  a{
+    display: block;
+    width: 534/@size;
+    height: 84/@size;
+    margin: 0 auto;
+    margin-top: 40/@size;
+    background: url("../images/tc_btn2.png") no-repeat;
+    background-size: cover;
+  }
+}

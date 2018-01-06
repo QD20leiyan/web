@@ -1,0 +1,525 @@
+html,body{
+	width:20rem;
+	height:100%;
+	overflow: hidden;
+}
+.box{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left:0;
+	top:0;
+	background: url(../images/pic_01.jpg) no-repeat center center;
+	background-size: cover;
+	transition:all 0.6s linear;
+}
+.box_hide{
+	left:-100%;
+}
+.logo{
+	width:7.21875rem;
+	height:4.15625rem;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 1;
+}
+.box_tips{
+	width:1.28125rem;
+	height:1.25rem;
+	position: absolute;
+	left:36%;
+	bottom:16%;
+	transform:translateX(-36%) ;
+	-webkit-transform:translateX(-36%);
+	z-index: 1;
+	animation:myMove 1.5s linear  infinite;
+	-webkit-animation:myMove 1.5s linear  infinite; 
+}
+@keyframes myMove
+{
+	from {
+		left:36%;
+	}
+	to {
+		left:30%;
+	}
+}
+@-webkit-keyframes myMove /* Safari and Chrome */
+{
+	from {
+		left:36%;
+	}
+	to {
+		left:30%;
+	}
+}
+
+
+
+
+.box_con{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left:100%;
+	top:0%;
+	background: url(../images/pic_08.jpg) no-repeat center center;
+	background-size: 100% 100%;
+	
+	transition:all 0.6s linear;
+}
+
+
+
+.box_con_show{
+	left:0;
+}
+.box_con_hide{
+	left:-100%;
+}
+
+.box_con_sup{
+	width:11.75rem;
+	height:11.75rem;
+	position: absolute;
+	left: 2.34375rem;
+	top: 3.03125rem;
+	z-index: 3;
+}
+.box_con_cd{
+	width:11.09375rem;
+	height:11.09375rem;
+	position: absolute;
+	left: 8.375rem;
+    top: 3.5rem;
+	z-index: 2;
+}
+.cd_rotate{
+	animation:myRotate 5s linear infinite;
+	-webkit-animation:myRotate 5s linear infinite; 
+}
+@keyframes myRotate
+{
+	from {
+		transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+		-webkit-transform:rotate(360deg);
+	}
+}
+@-webkit-keyframes myRotate /* Safari and Chrome */
+{
+	from {
+		transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+		-webkit-transform:rotate(360deg);
+	}
+}
+.song_text{
+	width:100%;
+	height:12.25rem;
+	position: absolute;
+	top: 11.85rem;
+	left:0;
+	z-index: 2;
+	transition:all 0.4s linear;
+}
+.song_text .p0{
+	width:100%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+	color:#fff;
+	font-size: 0.9375rem;
+	margin-top: 3.5rem;
+}
+.song_text .p1{
+	width:100%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+	color:#fff;
+	font-size: 0.9375rem;
+}
+.song_text .p2{
+	width:100%;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	text-align: center;
+	color:#fff;
+	font-size: 1.1875rem;
+	font-weight: 700;
+}
+.song_text .p3{
+	width:100%;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	color:#fff;
+	font-size: 0.875rem;
+}
+.song_text .p4{
+	width:100%;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	color:#fff;
+	font-size: 0.9375rem;
+}
+.song_controller{
+	width:100%;
+	height:5.0625rem;
+	background: #6b312a;
+	position: absolute;
+	left:0;
+	bottom:0;
+	z-index: 10;
+	transition:all 0.4s linear;
+	
+}
+.song_line{
+	width:0%;
+	height:2px;
+	background: #ff5e0e;
+	position: absolute;
+	left:0;
+	top:0;
+	z-index: 11;
+	transition:width 0.1s ease;
+}
+.song_line .song_l_sup{
+	width:1.375rem;
+	height:1.375rem;
+	position: absolute;
+	right:0;
+	top:1px;
+	transform:translate(50%,-50%,);
+	-webkit-transform:translate(50%,-50%);
+	border:0;
+}
+.song_name{
+	width:100%;
+	height:100%;
+	box-sizing: border-box;
+	padding: 1.1rem 0.7rem;
+	position: relative;
+}
+.song_name h1{
+	width:100%;
+	height:1.5625rem;
+	line-height: 1.5625rem;
+	font-weight: bolder;
+	font-size:0.85rem;
+	color:#fff;
+	letter-spacing: 2px;
+    margin-left: -0.3rem;
+}
+.song_name p{
+	width:100%;
+	height:1rem;
+	line-height: 1rem;
+	font-size:0.75rem;
+	color:#fff;
+}
+.song_play{
+	width:3.1875rem;
+	height:3.1875rem;
+	position: absolute;
+	right: 0.8rem;
+	top:1rem;
+	
+	z-index: 13;
+}
+.song_play img{
+	width:100%;
+	height:100%;
+	display: block;
+	border:0;
+}
+.relation{
+	width:15.5rem;
+	height:17.8125rem;
+	position: absolute;
+	left:2.25rem;
+	top:12.625rem;
+	transition:all 0.4s linear;
+}
+.relation>div{
+	width:100%;
+	height:25%;
+
+	box-sizing: border-box;	
+	
+	color:#400406;
+	
+	text-align: left;
+	border-bottom:1px solid #c6a026;
+	position: relative;
+	box-sizing: border-box;
+	
+}
+.relation_text{
+	width:100%;
+	height:100%;
+	font-size: 1.1875rem;
+	line-height: 1.125rem;
+	font-weight: 700;
+	box-sizing: border-box;
+	padding-left: 3.9375rem;
+	display: flex;
+	display: -webkit-flex; 
+	display: -moz-flex;
+	display: -ms-flexbox; 
+    justify-content: center;
+    flex-direction:column;
+}
+.relation_text .small{
+	font-weight: 400;
+	font-size: 0.75rem;
+	color:#400406;
+	line-height: 1.1875rem;
+}
+.relation_text>div:nth-of-type(1){
+	line-height: 1.5625rem;
+}
+.relation .icon{
+	width:2.75rem;
+	height:2.75rem;
+	position: absolute;
+	left:0;
+	top:50%;
+	margin-top: -1.375rem;
+	background: #8b191c;
+	border-radius: 100%;
+
+}
+.relation .icon img{
+	width:2.25rem;
+	height:2.25rem;
+	position: absolute;
+	left:0.25rem;
+	top:0.25rem;
+}
+
+
+
+
+
+#bgmusic{
+	position: fixed;
+	left:0%;
+	top:-100%;
+	z-index: 15;
+
+}
+#music1{
+	position: fixed;
+	left:0%;
+	top:-100%;
+	z-index: 15;
+}
+.cover{
+	width:100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.7;
+	position: fixed;
+	left:0;
+	top:0;
+	z-index: 14;
+	display: none;
+}
+.qrcode{
+	width: 100%;
+	height:100%;
+	position: fixed;
+	left:0;
+	top:0;
+	z-index: 15;
+	display: none;
+}
+.qrcode .qecode_imgbox{
+	width:10.875rem;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+}
+.qecode_imgbox .qecode_img{
+	width:10.875rem;
+	display: block;
+}
+.close{
+	width:2.375rem;
+	height:2.375rem;
+	position: absolute;
+	left:50%;
+	bottom:-4rem;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+}
+.share_bg{
+	width:100%;
+	height:100%;
+	position: fixed;
+	left:0;
+	top:0;
+	z-index: 16;
+	display: none;
+}
+.share_bg img{
+	width:100%;
+	height:100%;
+	display: block;
+}
+
+.end{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left:100%;
+	top:0%;
+	background: url(../images/pic_08.jpg) no-repeat center center;
+	background-size: 100% 100%;
+	
+	transition:all 0.6s linear;
+}
+.end_show{
+	left:0%;
+}
+
+.box_bunter{
+	width:100%;
+	position:absolute;
+	left:0;
+	top:15.375rem;
+	overflow: hidden;
+}
+.box_bunter_t{
+	width:100%;
+	text-align: center;
+	overflow: hidden;
+	position: absolute;
+    top: 5.3rem;
+}
+.box_bunter_t h3{
+	width:100%;
+	height:1.8125rem;
+	color:#fff;
+	font-weight: 700;
+	font-size: 1.0625rem;
+}
+.box_bunter_t p{
+	width:100%;
+	height:1.375rem;
+	color:#fff;
+	font-weight: 400;
+	font-size:0.75rem;
+}
+.box_bunter_b{
+	width:100%;
+	overflow: hidden;
+	margin-top: 1.7375rem;
+}
+.box_bunter_b1{
+	width:4.34375rem;
+	height:4.34375rem;
+	margin:0 auto;
+}
+.box_bunter_b1 img{
+	width:100%;
+	height:100%;
+}
+.box_bunter_b p{
+	line-height: 1.51875rem;
+	height:2.71875rem;
+	font-size:0.875rem;
+	color:#fff;
+	text-align:center;
+}
+.end_play,.bg_play{
+	width:1.8125rem;
+	height:1.8125rem;
+	position: absolute;
+	right:1rem;
+	top:1rem;
+	z-index: 15;	
+}
+.end_play_1, .bg_play_1{
+	animation:myRotatereverse 1s linear infinite;
+	-webkit-animation:myRotatereverse 1s linear infinite;
+}
+.txt img{
+	width: 4.5rem;
+	height: 8.125rem;
+	display: block;
+	position: absolute;
+	bottom: 0.7rem;
+	left: 50%;
+	margin-left: -2.25rem;
+}
+.return img,.wx img,.share img,.down img{
+	position: absolute;
+}
+.return img{
+	width: 2.90625rem;
+	height: 2.8125rem;
+	left: 0.7rem;
+	bottom: 7.96875rem;
+}
+.wx img{
+	width: 4.4375rem;
+	height: 3.0rem;
+	bottom: 7.66875rem;
+    left: 5.575rem;
+}
+.share img{
+	width: 2.90625rem;
+	height: 2.78125rem;
+	bottom: 7.96875rem;
+    right: 0.7rem;
+}
+.down img{
+	width: 7.9375rem;
+	height: 3.1875rem;
+	position: absolute;
+	bottom: 2.96875rem;
+	left: 3.9rem;
+}
+.logo_1 img{
+	width: 7.03125rem;
+	height: 3.90625rem;
+	position: absolute;
+	bottom: -1.5rem;
+    left: 4rem;
+}
+@keyframes myRotatereverse
+{
+	from {
+		transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(-360deg);
+		-webkit-transform:rotate(-360deg);
+	}
+}
+@-webkit-keyframes myRotatereverse /* Safari and Chrome */
+{
+	from {
+		transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(-360deg);
+		-webkit-transform:rotate(-360deg);
+	}
+}
+

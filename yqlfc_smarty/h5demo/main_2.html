@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <meta name="format-detection"content="telephone=no">
+		<title>卢正雨因为说错一句话，当场被叫停</title>
+		<link href="css/reset.css" type="text/css" rel="stylesheet" />
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="videobox">
+   <video 
+    id="videoALL" 
+    src="video/2_1.mp4" 
+    poster="images/2.jpg" 
+    preload="auto" 
+    webkit-playsinline="true" 
+    playsinline="true" 
+    x-webkit-airplay="allow" 
+    x5-video-player-type="h5" 
+    x5-video-player-fullscreen="true" 
+     x5-video-orientation="portraint"
+    style="object-fit:fill">
+    </video> 
+
+   <div id="btn" onclick="playcontr()"></div>
+</div>
+	<div class="handbox">
+	    <div id="hand" class="hand hand-animate"></div>
+	    <p class="hand-p">你敢不敢把<br/>更多明星摇出来</p>
+	    <div id="loading" class="loading"></div>
+	        <div id="result" class="result">
+	            <a href="main_1.html">
+		            <div class="pic"><img src="images/tou.png"></div>
+		            <div class="con">您摇到了3位明星<br/>点击看看他们都说了些什么吧！</div>
+	            </a>
+	        </div>
+    </div>
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content"> <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/ping.js"></script>
+<script src="js/public.js"></script>
+<script>
+var md=document.getElementsByTagName("video")[0];
+    md.addEventListener("ended",function(){
+         $(".handbox").show();
+	     $("#result").click(function(){
+	         $(".handbox").hide();
+	     })
+    });
+</script>
+</body>
+</html>

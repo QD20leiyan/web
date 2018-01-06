@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/price.css" />
+		<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+		<script type="text/javascript" src="js/jquery.fittext.js"></script>
+		<script type="text/javascript" src="js/price.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				$("#lottery a").click(function() {
+					if(click) { //click控制一次抽奖过程中不能重复点击抽奖按钮，后面的点击不响应
+						return false;
+					} else {
+						lottery.speed = 100;
+						lottery.prize = -1;
+						roll(); //转圈过程不响应click事件，会将click置为false
+						click = true; //一次抽奖完成后，设置click为true，可继续抽奖
+						$.ajax({
+							type: "POST",
+							url: "<?php echo Yii::app()->createUrl('/game/handle/lottery')?>",
+							data: "phone=" + <?php echo $info->phone?>,
+							dataType: "json",
+							success: function(data) {
+								if(data.status == 1) {
+									var prize = data.data.prize;
+									lottery.prize = prize;
+									$('#dialog').html(data.msg);
+								}
+
+							}
+						});
+						lottery.stop = function(index) {
+							$(".txt_put").css('display', "block");
+						}
+						return false;
+					}
+
+				});
+
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="top">
+				<div class="top_1">
+					<a class="store" href="javascript:;">我的商城</a><span>积分：100</span>
+					<a class="price" href="javascript:;">我的奖励</a>
+					<a class="back" href="javascript:;">退出</a>
+				</div>
+			</div>
+			<a style="display: block;" href="javascript:;">
+				<img class="price01" src="img/price.jpg" title="" alt="" />
+				<span class="duihuan01">兑换积分1500</span>
+			</a>
+			<a style="display: block;" href="javascript:;">
+				<img class="price02" src="img/price.jpg" title="" alt="" />
+				<span class="duihuan02">兑换积分1500</span>
+			</a>
+			<p class="jifen">CDkey兑换积分和抽奖机会</p>
+			<div class="txt_code">
+				<input class="fl" type="text" placeholder="请输入CDkey" />
+				<a class="fl" href="javascript:;" style="display: block;">
+					<img class="dh" src="img/gift_btn.png" title="" alt="" />
+				</a>
+			</div>
+			<div id="lottery">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr class="first_line">
+						<td class="lottery-unit lottery-unit-0"><img src="img/logo1.jpg">
+							<div class="mask"></div>
+						</td>
+						<td class="lottery-unit lottery-unit-1"><img src="img/logo2.png">
+							<div class="mask"></div>
+						</td>
+						<td class="lottery-unit lottery-unit-2 last"><img src="img/logo3.jpg">
+							<div class="mask"></div>
+						</td>
+					</tr>
+					<tr class="second_line">
+						<td class="lottery-unit lottery-unit-7"><img src="img/logo4.jpg">
+							<div class="mask"></div>
+						</td>
+						<td class="aaaa">
+							<a href="javascript:;"><img src="img/logo5.png"><span>今日还可抽X次</span></a>
+						</td>
+						<td class="lottery-unit lottery-unit-3 last"><img src="img/logo6.jpg">
+							<div class="mask"></div>
+						</td>
+					</tr>
+					<tr class="third_line">
+						<td class="lottery-unit lottery-unit-6"><img src="img/logo7.jpg">
+							<div class="mask"></div>
+						</td>
+						<td class="lottery-unit lottery-unit-5"><img src="img/logo8.jpg">
+							<div class="mask"></div>
+						</td>
+						<td class="lottery-unit lottery-unit-4 last"><img src="img/logo9.jpg">
+							<div class="mask"></div>
+						</td>
+					</tr>
+				</table>
+				<p class="txt_price">
+					抽奖次数<span>X</span>次
+				</p>
+			</div>
+			<!--弹出框-->
+			<div class="txt_put">
+				<div class="price_name">
+					<img class="close" src="img/close.png" title="" alt="" />
+					<p>您已获得<span>“我的礼包I”,</span>请到<i>“我的奖励”查看!</i></p>
+				</div>
+				<div class="include"></div>
+			</div>
+
+			<img class="logo_1" src="img/game_logo.png" title="" alt="" />
+			<img class="logo_2" src="img/contact_logo.png" title="" alt="" />
+		</div>
+	</body>
+
+</html>

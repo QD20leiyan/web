@@ -1,0 +1,58 @@
+.box{
+	background:url(../img/bg_02.jpg) no-repeat;
+	width:100%;
+	background-size:100% 100%;
+	height:35.5rem;
+	position:relative;
+}
+
+.top{
+	background:url(../img/55555.jpg) no-repeat;
+	background-size:100% 100%;
+	width:100%;
+	height:2.75rem;
+	overflow: hidden;
+	position:relative;
+}
+
+.top_1{
+	margin-left:0.875rem;
+	font-size:0.71875rem;
+	line-height:2.75rem;
+}
+.top_1 .store{
+	color:#fa4321;
+}
+.top_1 span{
+	color:white;
+	margin-left:0.90625rem;
+}
+
+.top_1 .price{
+	color:white;
+	margin-left:5.40625rem;
+}
+
+.top_1 .back{
+	margin-left:0.5625rem;
+	color:white;
+}
+.content {
+	max-height:32.75rem;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+.content h3{
+	font-size:0.71875rem;
+	color:white;
+	margin-top:1.34375rem;
+	margin-left:0.875rem;
+}
+.content p{
+	font-size:0.75rem;
+	color:#91a2b3;
+	margin-left:0.875rem;
+	width:16.21875rem;
+	line-height:1rem;
+	margin-top:1.5rem;
+}

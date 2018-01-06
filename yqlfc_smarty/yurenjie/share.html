@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html style="font-size:18.75px">
+<head>
+        <meta charset="UTF-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+		<meta name="format-detection" content="telephone=no,email=no,adress=no">
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery.fittext.js"></script>
+        <script src="js/js.js"></script>
+        <script src="js/echarts.js"></script>
+        <script src="js/js.js"></script>
+        <link href="css/style.css" rel="stylesheet" />
+    <!-- 引入 ECharts 文件 -->
+</head>
+<body>
+    <div class="result">
+        <div class="public">
+            <p>赵峥<br/>骗人主要靠以下能力</p>
+            <div id="main" style="width: 32rem;height:38.56rem;">
+
+            </div>
+             <div class="button">
+                 <div class="line"></div>
+                 
+                 <div class="img">
+                    <img src="images/warship.png" />
+                 </div>
+                 <div class="line line1"></div>
+                 <button type="button" class="start-btn"><a href="start.html"><img src="images/start-btn.png" /></a>                  </button>
+            </div>
+        </div>
+    </div>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    
+</body>
+    <script>
+	$(document).ready(function(){
+		$('html').fitText(2);
+	})
+    $('body').on('touchmove', function (event) {
+            event.preventDefault();
+       });
+	</script>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+    title: {
+        text: ''
+    },
+    radar: [
+           
+        {
+            indicator: [
+                { text: '颜值', max: 100 },
+                { text: '能五杀', max: 100 },
+                { text: '会喊麦', max: 100 },
+                { text: '婊', max: 100 },
+                { text: '胸大', max: 100 },
+                { text: '擅长扎心', max: 100 },
+                { text: '种子多', max: 100 }
+            ],
+            center: ['30%', '58%'],
+            radius: 120
+        }
+    ],
+    series: [
+        {
+            name: '雷达图',
+            type: 'radar',
+            itemStyle: {
+                emphasis: {
+                    color:'#0772d7',
+                    // lineStyle: {
+                    //     width: 4
+                    // }
+                }
+            },
+            data: [
+                {
+                    value: [200, 80, 20, 100, 60, 140, 80],
+                    name: '赵峥',
+                    areaStyle: {
+                        normal: {
+                            opacity: 0.5,
+                            color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [
+                                {
+                                    color: '#71a4c8',
+                                    offset: 0
+                                },
+                                {
+                                    color: '#006cc5',
+                                    offset: 1
+                                }
+                            ])
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</html>

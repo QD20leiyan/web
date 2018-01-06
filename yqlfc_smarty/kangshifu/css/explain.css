@@ -1,0 +1,198 @@
+body{
+	font-family: "Microsoft YaHei";
+}
+.box{
+	width:100%;
+	height:35.375rem;
+	background:url(../img/bg_02.jpg);
+	background-size: 100% 100%;
+	color: #fff;
+	z-index: 9999;
+	position: relative;
+	overflow: hidden;
+}
+.explain{
+	width:16.625rem;
+	height:20.875rem;
+	position:absolute;
+	left:50%;
+	top:2.1875rem;
+	margin-left:-8.3125rem;
+}
+.login_btn{
+	width:7.03125rem;
+	display: block;
+	height:2.03125rem;
+	position:absolute;
+	bottom:10.84375rem;
+	left:50%;
+	margin-left:-3.515625rem;
+}
+.box a{
+	display: block;
+}
+.logo_1{
+	display: block;
+	width:6.25rem;
+	height:3.625rem;
+	position:absolute;
+	bottom:5.6875rem;
+	left:4.5rem;
+}
+.logo_2{
+	display: block;
+	width:3.625rem;
+	height:3.34375rem;
+	position:absolute;
+	bottom:5.6875rem;
+	right:4.46875rem;
+}
+
+.mask{
+	background:url(../img/mask.png) no-repeat;
+	background-size:100% 100%;
+	width:14.78125rem;
+	height:8.5625rem;
+	position:relative;
+	top:11.0625rem;
+	z-index:2;
+	left:50%;
+	margin-left:-7.390625rem;
+}
+.denglu_put{
+	display: none;
+}
+.close{
+	width:1.71875rem;
+	height:1.59375rem;
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.txt_phone{
+	background:url(../img/txt_phone.jpg) no-repeat;
+	background-size:100% 100%;
+	width:13.125rem;
+	height:1.5625rem;
+	position:absolute;
+	top:2.3125rem;
+	left:50%;
+	margin-left:-6.5625rem;
+}
+.txt_phone span{
+	font-size:0.6875rem;
+	line-height:1.5625rem;
+	margin-left:0.3125rem;
+}
+.txt_phone input{
+	background:#2b3a5b;
+	border:0;
+	outline:none;
+}
+
+.tel{
+	width:10rem;
+	font-size:0.53125rem;
+	line-height:1.5625rem;
+	color:white;
+}
+.check_code{
+	background:url(../img/check_number.png) no-repeat;
+	background-size:100% 100%;
+	width:7.5rem;
+	height:1.5625rem;
+	position:absolute;
+	top:4.1875rem;
+	left:0.71875rem;
+}
+.check_code span{
+	font-size:0.6875rem;
+	line-height:1.5625rem;
+	margin-left:0.3125rem;
+}
+
+.check_code input {
+	background:#2b3a5b;
+	border:0;
+	outline:none;
+}
+
+.code{
+	width:4.3rem;
+	font-size:0.53125rem;
+	line-height:1.5625rem;
+	color:white;
+}
+
+.put_code{
+	background:url(../img/check_code.png) no-repeat;
+	background-size:100% 100%;
+	width:5.28125rem;
+	height:1.5625rem;
+	position:absolute;
+	top:4.1875rem;
+	right:0.71875rem;
+}
+
+.put_code button{
+	font-size:0.6875rem;
+	line-height:1.5625rem;
+	background:none;
+	outline:0;
+	border:0;
+	color:white;
+	text-align: center;
+	margin-left:0.6rem;
+}
+
+.denglu{
+	position:absolute;
+	width:2.8125rem;
+	height:1.15625rem;
+	left:50%;
+	margin-left:-1.40625rem;
+	bottom:0.71875rem;
+}
+
+.include{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+	opacity: .5;
+	width:100%;
+	height:100%;
+	background-color:#12385c;
+}
+
+.wrong_tel{
+	background:url(../img/mask.png) no-repeat;
+	background-size:100% 100%;
+	width:14.78125rem;
+	height:8.5625rem;
+	position:relative;
+	top:11.0625rem;
+	left:50%;
+	margin-left:-7.390625rem;
+}
+
+.wrong_put{
+	z-index:2;
+	display: none;
+}
+.wrong_tel p{
+	font-size:0.59375rem;
+	position:absolute;
+	top:1.71875rem;
+	left:1.5625rem;
+}
+
+.wrong_tel .sure{
+	position:absolute;
+	width:2.8125rem;
+	height:1.15625rem;
+	left:50%;
+	margin-left:-1.40625rem;
+	bottom:0.71875rem;
+}

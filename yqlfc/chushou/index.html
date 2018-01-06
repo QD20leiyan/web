@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/fc.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript">
+			(function(win, doc) {
+				if(!win.addEventListener) return;
+				var html = document.documentElement;
+
+				function setFont(cb) {
+					var w = html.clientWidth,
+						h = html.clientHeight;
+					html.style.fontSize = w > h ? w / 1136 * 100 + "px" : w / 640 * 100 + "px";
+					if(cb && typeof(cb) == "function") {
+						cb()
+					}
+				}
+				doc.addEventListener('DOMContentLoaded', setFont, false);
+				win.addEventListener('resize', setFont, false);
+				win.addEventListener('load', setFont, false);
+			})(window, document);
+		</script>
+	</head>
+
+	<body>
+		<div class="c_bg">
+			<div class="m_bg">
+				<div class="m_main">
+					<ul class="m_ul">
+						<li class="h_pic">
+							<span>
+								<img src="images/bg.jpg" alt="" />
+								<img class="close" src="images/close.png" alt="" />
+							</span>
+							<p>桃子</p>
+						</li>
+						<li class="w_pic">
+							<span>
+							<img src="images/bg.jpg" alt="" />
+						</span>
+							<p>桃子</p>
+						</li>
+						<li class="w_pic">
+							<span>
+							<img src="images/bg.jpg" alt="" />
+						</span>
+							<p>桃子</p>
+						</li>
+						<li class="w_pic">
+							<span>
+							<img src="images/bg.jpg" alt="" />
+						</span>
+							<p>桃子</p>
+						</li>
+						<li class="w_pic">
+							<span>
+							<img src="images/bg.jpg" alt="" />
+						</span>
+							<p>桃子</p>
+						</li>
+						<li class="w_pic">
+							<span>
+							<img src="images/bg.jpg" alt="" />
+						</span>
+							<p>桃子</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<a class="btn" href="javascript:;">
+				<img src="images/btn.png" alt="" />
+				<img src="images/btn_h.png" alt="" />
+			</a>
+			<div class="tc" style="display: none;">
+				<p>按时递交上降低哦</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".btn").click(function() {
+			$(this).addClass("active");
+		});
+	</script>
+
+</html>

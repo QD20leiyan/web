@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="format-detection"content="telephone=no">
+<title>卢正雨因为说错一句话，当场被叫停</title>
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    var u = navigator.userAgent, app = navigator.appVersion;  
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器  
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端 
+    if(isiOS){
+       location.href="index.html"
+    }
+</script>
+</head>
+<body>
+<div id="videobox" class="videobox1">
+   <video 
+    id="videoALL" 
+    src="video/1.mp4" 
+    poster="images/1.jpg" 
+    preload="auto" 
+    webkit-playsinline="true" 
+    playsinline="true" 
+    x-webkit-airplay="allow" 
+    x5-video-player-type="h5" 
+    x5-video-player-fullscreen="true" 
+     x5-video-orientation="portraint"
+    muted playsinline
+    style="object-fit:fill">
+    </video> 
+   <div id="btn" onclick="playcontr()"></div>
+</div>
+<div id="well" class="slide">
+     <h2><strong id="slider"> <img src="images/top.png" class=""></strong><span><p>看看卢正雨说了啥</p></span></h2>
+     <i><img src="images/jiantou.png"></i>
+</div>
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content"> <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src='js/jquery-ui.min.js'></script>
+<script src='js/slidetounlock.js'></script>
+<script src='js/public.js'></script>
+<script>
+var md=document.getElementsByTagName("video")[0];
+    md.addEventListener("ended",function(){
+         $(".slide").show();
+    });
+$('#slider')[0].addEventListener('touchmove', function(event) {
+        event.preventDefault();
+        var el = event.target;
+        var touch = event.touches[0];
+        curX = touch.pageX - this.offsetLeft - 53;
+        if(curX <= 0) return;
+        if(curX > 200){
+            $('#well').fadeOut();
+            location.href="main_2.html";
+        }
+        el.style.webkitTransform = 'translateX(' + curX + 'px)'; 
+    }, false);
+</script>
+</body>
+</html>

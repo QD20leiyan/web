@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/explain.css" />
+		<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+		<script type="text/javascript" src="js/jquery.fittext.js"></script>
+		<script type="text/javascript" src="js/explain.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="box">
+			<img class="explain" src="img/explain.png" title="" alt="" />
+			<a href="javascript:;"><img class="login_btn" src="img/login_btn.png" title="" alt="" /></a>
+			<img class="logo_1" src="img/game_logo.png" title="" alt="" />
+			<img class="logo_2" src="img/contact_logo.png" title="" alt="" />
+			<div class="denglu_put">
+				<div class="mask">
+					<img class="close" src="img/close.png" title="" alt="" />
+					<div class="txt_phone">
+						<span>手机号:</span><input class="tel fr" type="text" placeholder="输入手机号" />
+					</div>
+					<div class="check_code">
+						<span>验证码:</span><input class="code fr" type="text" placeholder="输入验证码" />
+					</div>
+					<div class="put_code">
+						<button id="get_code" class="get_code">发送验证码</button>
+					</div>
+					<a style="display: block;" href="main_menu.html"><img class="denglu" src="img/denglu.jpg" title="" alt="" /></a>
+				</div>
+				<div class="include"></div>
+			</div>
+
+			<div class="wrong_put">
+				<div class="wrong_tel">
+					<img class="close" src="img/close.png" title="" alt="" />
+					<p>您输入的手机号不正确</p>
+					<a href="javascript:;"><img class="sure" src="img/sure.jpg" title="" alt="" /></a>
+				</div>
+				<div class="include"></div>
+			</div>
+		</div>
+	</body>
+
+</html>

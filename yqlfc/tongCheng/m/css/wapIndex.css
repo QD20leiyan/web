@@ -1,0 +1,325 @@
+.p-x-center {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.no-margin {
+  margin: 0 !important;
+}
+html,
+body {
+  font-family: "Microsoft YaHei", "Helvetica Neue", Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
+}
+input,
+button {
+  border: none;
+  outline-style: none;
+}
+.container {
+  width: 100%;
+  height: 42.875rem;
+  position: relative;
+  overflow: hidden;
+  background: url("../images/bimg.png") no-repeat;
+  background-size: cover;
+}
+.tc {
+  width: 4.5rem;
+  height: 1.0625rem;
+  top: 0.75rem;
+}
+.logo {
+  position: absolute;
+  top: 0.3125rem;
+  right: 3.4375rem;
+}
+.item1 {
+  width: 16.90625rem;
+  height: 6.40625rem;
+  margin: 0 auto;
+  margin-top: 10.1875rem;
+  background: url("../images/item1.png") no-repeat;
+  background-size: cover;
+}
+.item2 {
+  width: 16.875rem;
+  height: 7.8125rem;
+  margin: 0 auto;
+  margin-top: 0.78125rem;
+  overflow: hidden;
+  background: url("../images/item2.png") no-repeat;
+  background-size: cover;
+}
+.item2 p {
+  width: 100%;
+  height: auto;
+  margin: 2.25rem 0 0 0;
+  padding: 0 1.25rem;
+  line-height: 0.8125rem;
+  color: #fff;
+  font-size: 0.4375rem;
+  box-sizing: border-box;
+}
+.item2 a {
+  display: block;
+  width: 14.8125rem;
+  height: 1.875rem;
+  margin: 0 auto;
+  background: url("../images/btn1.png") no-repeat;
+  background-size: cover;
+}
+.item3 {
+  width: 16.875rem;
+  height: 6.8125rem;
+  margin: 0 auto;
+  margin-top: 0.78125rem;
+  overflow: hidden;
+  background: url("../images/item3.png") no-repeat;
+  background-size: cover;
+}
+.item3 p {
+  width: 100%;
+  height: auto;
+  margin-top: 3.25rem;
+  color: #fff;
+  line-height: 0.8125rem;
+  font-size: 0.5rem;
+  padding: 0 1.09375rem;
+  box-sizing: border-box;
+}
+.item3 h2 {
+  width: 100%;
+  height: auto;
+  padding: 0 0.9375rem 0 0;
+  margin-top: 0.1875rem;
+  color: #a892f5;
+  text-align: right;
+  font-size: 0.5625rem;
+  box-sizing: border-box;
+}
+.item4 {
+  width: 100%;
+  height: auto;
+  margin: 1.0625rem 0 0 0;
+}
+.item4 label {
+  display: block;
+  width: 16.625rem;
+  height: 0.875rem;
+  margin: 0 auto;
+  margin-bottom: 0.9375rem;
+  background: url("../images/lqjl.png") no-repeat;
+  background-size: cover;
+}
+.item4 ul {
+  width: 16.625rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0.1875rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.item4 ul li {
+  float: left;
+  width: 4.65625rem;
+  height: 4.5625rem;
+  margin: 0 1.125rem 0 0;
+  background: url("../images/box_bimg.png") no-repeat;
+  background-size: cover;
+}
+.item4 ul li img {
+  width: 3.4375rem;
+  height: 2.8125rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+.item4 ul li p {
+  width: 100%;
+  height: auto;
+  margin: 0.1875rem 0 0 0;
+  color: #a892f5;
+  font-size: 0.625rem;
+  text-align: center;
+}
+.item4 a {
+  display: block;
+  width: 14.59375rem;
+  height: 1.875rem;
+  margin: 0 auto;
+  margin-top: 0.3125rem;
+  background: url("../images/btn2.png") no-repeat;
+  background-size: cover;
+}
+/*这是弹窗*/
+.p-all-center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.tc_close {
+  position: absolute;
+  display: block;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  padding: 0.15625rem;
+  top: 0.5rem;
+  right: 0.78125rem;
+  background: url("../images/tc_close.png") no-repeat;
+  background-size: 0.9375rem 0.9375rem;
+  background-position: center;
+}
+.tc-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all .2s;
+  -webkit-transition: all .2s;
+}
+.tc-container > form {
+  width: 18.25rem;
+  height: 13.03125rem;
+  background: url("../images/tc_bimg.png") no-repeat;
+  background-size: cover;
+}
+.tc-container > form > p {
+  width: 16.6875rem;
+  margin: 0 auto;
+  font-size: 0.375rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.875rem;
+}
+.tc-container > form a {
+  display: block;
+  width: 16.6875rem;
+  height: 2.625rem;
+  margin: 0 auto;
+  background: url("../images/tc_btn1.png") no-repeat;
+  background-size: cover;
+}
+.tc-item {
+  width: 16.6875rem;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1.875rem;
+  overflow: hidden;
+}
+.tc-item label {
+  display: block;
+  width: 3.125rem;
+  height: 100%;
+  float: left;
+  line-height: 1.875rem;
+  color: #cbcbcb;
+  font-size: 0.6875rem;
+}
+.tc-item div {
+  width: 13.125rem;
+  height: 100%;
+  position: relative;
+  float: left;
+  margin: 0 0 0 0.4375rem;
+}
+.tc-item div input {
+  width: 100%;
+  height: 1.875rem;
+  font-size: 0.75rem;
+  text-indent: 0.3125rem;
+  color: #ececec;
+  line-height: 1.875rem;
+  background: #2f2b3f;
+}
+.tc-item2 {
+  margin-top: 0;
+}
+.tc-item2 div {
+  width: 6.875rem;
+  height: 100%;
+  position: relative;
+}
+.tc-item2 div input {
+  width: 100%;
+  height: 1.875rem;
+  font-size: 0.75rem;
+  text-indent: 0.3125rem;
+  color: #ececec;
+  line-height: 1.875rem;
+  background: #2f2b3f;
+}
+.tc-item2 button {
+  float: right;
+  width: 5.1875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  font-size: 0.625rem;
+  color: #662009;
+  background: url("../images/yzm_btn.png") no-repeat;
+  background-size: cover;
+}
+.tc-err {
+  width: 13.125rem;
+  height: auto;
+  visibility: hidden;
+  float: right;
+  font-size: 0.5rem;
+  color: #f1363a;
+  margin: 0.25rem 0 0.3125rem 0;
+}
+.tc-err label {
+  display: inline-block;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  margin: 0 0.125rem 0 0;
+  background: url("../images/tc_errIocn.png") no-repeat;
+  background-size: cover;
+}
+.tc-container > div {
+  display: none;
+  width: 18.25rem;
+  height: 13.03125rem;
+  background: url("../images/tc_bimg.png") no-repeat;
+  background-size: cover;
+}
+.tc-container > div h1 {
+  width: 66%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  color: #cbcbcb;
+  text-align: center;
+  line-height: 1.4375rem;
+}
+.tc-container > div p {
+  width: 66%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  font-size: 0.6875rem;
+  color: #cbcbcb;
+  text-align: center;
+  line-height: 1.4375rem;
+}
+.tc-container > div p span {
+  color: #f1d84d;
+}
+.tc-container > div a {
+  display: block;
+  width: 16.6875rem;
+  height: 2.625rem;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  background: url("../images/tc_btn2.png") no-repeat;
+  background-size: cover;
+}
