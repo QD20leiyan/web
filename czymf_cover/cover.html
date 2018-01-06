@@ -2,12 +2,14 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<title>创造与魔法官方网站-每一个梦想 都将在这里实现</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
 		<meta name="format-detection" content="telephone=no">
-		<meta name="format-detection" content="telephone=no">
-		<title>创造与魔法</title>
-		<link rel="stylesheet" href="common/css/common.min.css" />
+		<!-- 关键词及描述 -->
+		<meta name="keywords" content="创造,魔法,创造与魔法,创造与魔法官方网站,创造与魔法预约,创造与魔法手游,创造与魔法沙盒手游,高自由度">
+    	<meta name="description" content="创造与魔法官方网站，提供创造的下载、预约、新闻、视频、攻略等内容。创造与魔法是一款可以改造环境，自由建造房屋、城池、城邦甚至国家，同时还能探险，交友、副本、换装的高自由生存游戏。玩家可以在沙漠、丛林、草原、海滩等多种不同环境降生，甚至能够创建属于自己的文明，还在等什么，快来开始你的冒险之旅吧！">
 
+		<link rel="stylesheet" href="common/css/common.min.css" />
 		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="common/css/swiper.3.1.7.min.css" />
 		<link rel="stylesheet" href="css/index.css" />
@@ -17,6 +19,34 @@
 
 			});
 		</script>
+		<script>
+        	(function (doc, win) {
+        	    var docEl = doc.documentElement,
+        	    // 手机旋转事件,大部分手机浏览器都支持 onorientationchange 如果不支持，可以使用原始的 resize
+        	            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        	            recalc = function () {
+        	                //clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框
+        	                var clientWidth = docEl.clientWidth;
+        	                if (!clientWidth) return;
+        	                docEl.style.fontSize = 16*(clientWidth / 320) + 'px';
+        	            };
+
+        	    recalc();
+        	    //判断是否支持监听事件 ，不支持则停止
+        	    if (!doc.addEventListener) return;
+        	    //注册翻转事件
+        	    win.addEventListener(resizeEvt, recalc, false);
+        	})(document, window);
+    	</script>
+    	<script>
+        	var _hmt = _hmt || [];
+        	(function() {
+        	    var hm = document.createElement("script");
+        	    hm.src = "https://hm.baidu.com/hm.js?cd3c5f317e3f5ced9e323d594c3eb7b3";
+        	    var s = document.getElementsByTagName("script")[0];
+        	    s.parentNode.insertBefore(hm, s);
+        	})();
+    	</script>
 	</head>
 
 	<body>
