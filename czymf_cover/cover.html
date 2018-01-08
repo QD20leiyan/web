@@ -164,8 +164,14 @@
     					<span class="swiper-pagination-bullet"></span>
     					<span class="swiper-pagination-bullet"></span>
     				</div>
-    				<div class="swiper-button-prev swiper-button-prev02"></div>
-                    <div class="swiper-button-next swiper-button-next02"></div>
+    				<div class="swiper-button-prev swiper-button-prev02">
+    					<img src="img/prev.png" alt="" />
+						<img src="img/prev_on.png" alt="" />
+    				</div>
+                    <div class="swiper-button-next swiper-button-next02">
+                    	<img src="img/next.png" alt="" />
+						<img src="img/next_on.png" alt="" />
+                    </div>
 				</div>
 			</div>
 		</section>
@@ -238,8 +244,14 @@
     					<span class="swiper-pagination-bullet"></span>
     					<span class="swiper-pagination-bullet"></span>
     				</div>
-    				<div class="swiper-button-prev swiper-button-prev04"></div>
-                    <div class="swiper-button-next swiper-button-next04"></div>
+    				<div class="swiper-button-prev swiper-button-prev04">
+    					<img src="img/prev.png" alt="">
+    					<img src="img/prev_on.png" alt="">
+    				</div>
+                    <div class="swiper-button-next swiper-button-next04">
+                    	<img src="img/next.png" alt="">
+    					<img src="img/next_on.png" alt="">
+                    </div>
 				</div>
 				<a href="##" class="more"></a>
 		</section>
@@ -359,19 +371,19 @@
                 prevButton:'.swiper-button-prev04',
                 nextButton:'.swiper-button-next04'
         	});
-			$(".yxyy").click(function() {
-				var u = navigator.userAgent, app = navigator.appVersion;
-			    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
-			    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-			    if (isAndroid) {
-			       location.href="http://downurl.yingxiong.com/android/czymf_wjtest.html";
-			    }
-			    if (isIOS) {
-			        $(".login").show();
-					$(".mask").show();
-			    }
+			// $(".yxyy").click(function() {
+			// 	var u = navigator.userAgent, app = navigator.appVersion;
+			//     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+			//     var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+			//     if (isAndroid) {
+			//        location.href="http://downurl.yingxiong.com/android/czymf_wjtest.html";
+			//     }
+			//     if (isIOS) {
+			//         $(".login").show();
+			// 		$(".mask").show();
+			//     }
 				
-			})
+			// })
 			function windowHidden(){
        			$("html,body").css({
             		"overflow":"hidden",

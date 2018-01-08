@@ -532,23 +532,19 @@ a:visited {
     border-radius: 0;
     opacity: 1;
 }
-.zuopin .zuopin_con .swiper-button-prev{
+.zuopin .zuopin_con .swiper-button-prev img{
     width:0.65625rem;
     height:1.6875rem;
-    background: url(../img/prev.png) no-repeat;
-    background-size: 100% 100%;
     position:absolute;
-    top:5.15625rem;
+    top:50%;
     left:0.46875rem;
     z-index:100;
 }
-.zuopin .zuopin_con .swiper-button-next{
+.zuopin .zuopin_con .swiper-button-next img{
     width:0.65625rem;
     height:1.6875rem;
-    background: url(../img/next.png) no-repeat;
-    background-size: 100% 100%;
     position:absolute;
-    top:5.15625rem;
+    top:50%;
     right:0.46875rem;
     z-index:100;
 }
@@ -687,23 +683,19 @@ a:visited {
     bottom:0;
     right:0;
 }
-.zhubo .zhubo_con .swiper-button-prev04{
+.zhubo .zhubo_con .swiper-button-prev img{
     width:0.65625rem;
     height:1.6875rem;
-    background: url(../img/prev.png) no-repeat;
-    background-size: 100% 100%;
     position:absolute;
-    top:4.35625rem;
+    top:8%;
     left:0.46875rem;
     z-index:100;
 }
-.zhubo .zhubo_con .swiper-button-next04{
+.zhubo .zhubo_con .swiper-button-next img{
     width:0.65625rem;
     height:1.6875rem;
-    background: url(../img/next.png) no-repeat;
-    background-size: 100% 100%;
     position:absolute;
-    top:4.35625rem;
+    top:8%;
     right:0.46875rem;
     z-index:100;
 }
@@ -805,17 +797,26 @@ a:visited {
 	font-size:0.684375rem; 
 	color:#707070;
 }
-.swiper-button-prev .swiper-button-disabled {
-    background: url(../img/prev_on.png) no-repeat !important;
-    background-size: 100% 100%;
-    cursor: auto;
-    pointer-events: none;
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+	opacity: 1;
 }
-.swiper-button-next .swiper-button-disabled {
-    background: url(../img/next_on.png) no-repeat !important;
-    background-size: 100% 100%;
-    cursor: auto;
-    pointer-events: none;
+.swiper-button-prev img:nth-child(2){
+	display: none;
+}
+.swiper-button-next img:nth-child(2){
+	display: none;
+}
+.swiper-button-prev.swiper-button-disabled img:nth-child(1){
+	display: none;
+}
+.swiper-button-next.swiper-button-disabled img:nth-child(1){
+	display: none;
+}
+.swiper-button-prev.swiper-button-disabled img:nth-child(2){
+	display: block;
+}
+.swiper-button-next.swiper-button-disabled img:nth-child(2){
+	display: block;
 }
 .main1,.news,.zuopin,.ziliao,.wanfa,.zhubo,.bot_con,.bot_info{
 	overflow: hidden;
