@@ -10,6 +10,7 @@ input[type=text] {
 	-webkit-appearance: none;
 	outline: none;
 }
+*::-webkit-scrollbar {display:none}
 .show {
 	display: block
 }
@@ -493,10 +494,12 @@ a:visited {
 	margin-right:0rem;
 }
 .bird{
-	position: absolute;
-	left:1.0rem;
-	bottom:-5rem;
-	z-index:15;
+	width: 19rem;
+    position: absolute;
+    left: 1.0rem;
+    bottom: -5rem;
+    z-index: 15;
+    overflow: hidden;
 }
 .bird img{
 	width:25.71875rem;
